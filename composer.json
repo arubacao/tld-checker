@@ -1,17 +1,15 @@
 {
-    "name": "spatie/:package_name",
-    "description": ":package_description",
+    "name": "arubacao/tld-checker",
+    "description": "place holder description",
     "keywords": [
-        "spatie",
-        ":package_name"
+        "tld-checker"
     ],
-    "homepage": "https://github.com/spatie/:package_name",
+    "homepage": "https://github.com/arubacao/tld-checker",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": "https://spatie.be",
+            "name": "Christopher Lass",
+            "email": "arubacao@gmail.com",
             "role": "Developer"
         }
     ],
