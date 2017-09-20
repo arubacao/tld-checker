@@ -21,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src"
+            "Arubacao\\TldChecker\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Test\\": "tests"
+            "Arubacao\\TldChecker\\Test\\": "tests"
         }
     },
     "scripts": {
@@ -38,11 +38,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
-            }
+                "Arubacao\\TldChecker\\TldCheckerServiceProvider"
+            ]
         }
     }
 }
