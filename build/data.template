@@ -11,6 +11,8 @@
  * @author	Christopher Lass <arubacao@gmail.com>
  */
 
+namespace Arubacao\TldChecker;
+
 /**
  * Data Source: Root Zone Database
  * The Root Zone Database represents the delegation details of top-level domains,
@@ -21,6 +23,6 @@
  */
 class RootZoneDatabase {
 
-	const SUFFIXES = %SUFFIXES%;
+	const TLDS = %TLDS%;
 
 }
