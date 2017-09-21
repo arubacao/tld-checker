@@ -33,6 +33,28 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
     /**
      * @test
      */
+    public function test_invalid_domains_with_is_tld()
+    {
+        /** @var \Illuminate\Validation\Validator $validator */
+        $validator = \Validator::make([
+            'invalid' => [
+                ['tld' => 'coom'],
+                ['tld' => '.C.o.M'],
+                ['tld' => 'Blablbal'],
+                ['tld' => 'c o m'],
+                ['tld' => 'рaф'],
+                ['tld' => 'ققط'],
+            ],
+        ], [
+            'invalid.*.tld' => 'is_tld',
+        ]);
+
+        $this->assertTrue($validator->fails());
+    }
+
+    /**
+     * @test
+     */
     public function test_valid_domains_with_ends_with_tld()
     {
         /** @var \Illuminate\Validation\Validator $validator */
@@ -58,7 +80,7 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
     {
         /** @var \Illuminate\Validation\Validator $validator */
         $validator = \Validator::make([
-            'valid' => [
+            'invalid' => [
                 ['tld' => 'googlecoom'],
                 ['tld' => 'gooogle.C.o.M'],
                 ['tld' => 'google.Blablbal'],
@@ -67,9 +89,41 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
                 ['tld' => 'الاعلى-للاتصالات.ققط'],
             ],
         ], [
-            'valid.*.tld' => 'is_tld',
+            'invalid.*.tld' => 'ends_with_tld',
         ]);
 
         $this->assertTrue($validator->fails());
+    }
+
+    /**
+     * @test
+     */
+    public function is_tld_throws_error_message()
+    {
+        /** @var \Illuminate\Validation\Validator $validator */
+        $validator = \Validator::make([
+            'invalid' => 'coom',
+        ], [
+            'invalid' => 'is_tld',
+        ]);
+
+        $this->assertTrue($validator->fails());
+        $this->assertSame('The invalid field is not a valid tld.', $validator->messages()->first());
+    }
+
+    /**
+     * @test
+     */
+    public function ends_with_tld_throws_error_message()
+    {
+        /** @var \Illuminate\Validation\Validator $validator */
+        $validator = \Validator::make([
+            'invalid' => 'googlecoom',
+        ], [
+            'invalid' => 'ends_with_tld',
+        ]);
+
+        $this->assertTrue($validator->fails());
+        $this->assertSame('The invalid file does not end with a valid tld.', $validator->messages()->first());
     }
 }

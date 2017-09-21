@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Christopher
- * Date: 18.09.2017
- * Time: 22:02
- */
 
 namespace Arubacao\TldChecker;
 
@@ -26,7 +20,7 @@ class TldCheckerServiceProvider extends ServiceProvider
             function ($attr, $value, $param, $validator) {
                 return TldValidator::isTld($value);
             },
-            'The :attribute is not a valid tld.'
+            'The :attribute field is not a valid tld.'
         );
 
         Validator::extend(
@@ -34,7 +28,7 @@ class TldCheckerServiceProvider extends ServiceProvider
             function ($attr, $value, $param, $validator) {
                 return TldValidator::endsWithTld($value);
             },
-            'The :attribute does not end with a valid tld.'
+            'The :attribute file does not end with a valid tld.'
         );
     }
 }
