@@ -11,6 +11,7 @@ class Validator
      */
     public static function isTld($value)
     {
+        $value = ltrim($value, ".");
         $value = idn_to_ascii($value);
         $value = strtoupper($value);
 
