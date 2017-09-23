@@ -19,7 +19,7 @@
     },
     "require-dev": {
         "orchestra/testbench": "~3.0",
-        "phpunit/phpunit": ">=4.8.36|>=5.7.21|~6.0"
+        "phpunit/phpunit": ">=4.8.36 || >=5.7.21 || ~6.0"
     },
     "suggest": {
         "illuminate/validation": "Required for Laravel validation"

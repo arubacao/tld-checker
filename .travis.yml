@@ -12,55 +12,68 @@ matrix:
       env:
         - LARAVEL_VERSION=5.0.*
         - ORCHESTRA_VERSION=3.0.*
+        - PHPUNIT_VERSION=4.8.*
     - php: 7.0
       env:
         - LARAVEL_VERSION=5.1.*
         - ORCHESTRA_VERSION=3.1.*
+        - PHPUNIT_VERSION=5.7.*
     - php: 7.0
       env:
         - LARAVEL_VERSION=5.2.*
         - ORCHESTRA_VERSION=3.2.*
+        - PHPUNIT_VERSION=5.7.*
     - php: 7.0
       env:
         - LARAVEL_VERSION=5.3.*
         - ORCHESTRA_VERSION=3.3.*
+        - PHPUNIT_VERSION=5.7.*
     - php: 7.0
       env:
         - LARAVEL_VERSION=5.4.*
         - ORCHESTRA_VERSION=3.4.*
+        - PHPUNIT_VERSION=5.7.*
     - php: 7.0
       env:
         - LARAVEL_VERSION=5.5.*
         - ORCHESTRA_VERSION=3.5.*
+        - PHPUNIT_VERSION=~6.0
     - php: 7.1
       env:
         - LARAVEL_VERSION=5.0.*
         - ORCHESTRA_VERSION=3.0.*
+        - PHPUNIT_VERSION=4.8.*
     - php: 7.1
       env:
         - LARAVEL_VERSION=5.1.*
         - ORCHESTRA_VERSION=3.1.*
+        - PHPUNIT_VERSION=5.7.*
     - php: 7.1
       env:
         - LARAVEL_VERSION=5.2.*
         - ORCHESTRA_VERSION=3.2.*
+        - PHPUNIT_VERSION=5.7.*
     - php: 7.1
       env:
         - LARAVEL_VERSION=5.3.*
         - ORCHESTRA_VERSION=3.3.*
+        - PHPUNIT_VERSION=5.7.*
     - php: 7.1
       env:
         - LARAVEL_VERSION=5.4.*
         - ORCHESTRA_VERSION=3.4.*
+        - PHPUNIT_VERSION=5.7.*
     - php: 7.1
       env:
         - LARAVEL_VERSION=5.5.*
         - ORCHESTRA_VERSION=3.5.*
+        - PHPUNIT_VERSION=~6.0
 
 before_install:
   - composer self-update --stable -n
   - composer require "laravel/framework:${LARAVEL_VERSION}" --no-update --no-interaction --dev
   - composer require "orchestra/testbench:${ORCHESTRA_VERSION}" --no-update --no-interaction --dev
+  - composer require "phpunit/phpunit:${ORCHESTRA_VERSION}" --no-update --no-interaction --dev
 
 install:
   - travis_retry composer update --no-suggest --no-interaction
