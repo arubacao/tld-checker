@@ -73,7 +73,7 @@ before_install:
   - composer self-update --stable -n
   - composer require "laravel/framework:${LARAVEL_VERSION}" --no-update --no-interaction --dev
   - composer require "orchestra/testbench:${ORCHESTRA_VERSION}" --no-update --no-interaction --dev
-  - composer require "phpunit/phpunit:${ORCHESTRA_VERSION}" --no-update --no-interaction --dev
+  - composer require "phpunit/phpunit:${PHPUNIT_VERSION}" --no-update --no-interaction --dev
 
 install:
   - travis_retry composer update --no-suggest --no-interaction
