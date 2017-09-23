@@ -1,4 +1,5 @@
 <?php
+
 namespace Arubacao\TldChecker\Test;
 
 use PHPUnit\Framework\TestCase;

@@ -1,4 +1,5 @@
 <?php
+
 namespace Arubacao\TldChecker\Test;
 
 class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase

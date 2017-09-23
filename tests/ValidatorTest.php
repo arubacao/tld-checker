@@ -165,5 +165,4 @@ class ValidatorTest extends TestCase
         $this->assertTrue(Validator::endsWithTld('www.இந.இந்தியா'));
         $this->assertTrue(Validator::endsWithTld('Deutsche.Vermögensberatung.vermögensberater'));
     }
-
 }
