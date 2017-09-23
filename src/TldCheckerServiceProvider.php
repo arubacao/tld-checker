@@ -31,4 +31,14 @@ class TldCheckerServiceProvider extends ServiceProvider
             'The :attribute file does not end with a valid tld.'
         );
     }
+
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        // Laravel 5.0 compatibility
+    }
 }

@@ -18,9 +18,8 @@
         "ext-intl": "*"
     },
     "require-dev": {
-        "arubacao/php-cs-fixer-config": "^0.1.0",
         "orchestra/testbench": "~3.0",
-        "phpunit/phpunit": "~6.0"
+        "phpunit/phpunit": ">=4.8.36|>=5.7.21|~6.0"
     },
     "suggest": {
         "illuminate/validation": "Required for Laravel validation"
@@ -36,8 +35,7 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit",
-        "cs": "vendor/bin/php-cs-fixer fix ./ --config=vendor/arubacao/php-cs-fixer-config/laravel.php_cs -vv"
+        "test": "vendor/bin/phpunit"
     },
     "config": {
         "sort-packages": true

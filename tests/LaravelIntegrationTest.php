@@ -14,21 +14,23 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
      */
     public function test_valid_domains_with_is_tld()
     {
-        /** @var \Illuminate\Validation\Validator $validator */
-        $validator = \Validator::make([
-            'valid' => [
-                ['tld' => 'com'],
-                ['tld' => 'CoM'],
-                ['tld' => '.CoM'],
-                ['tld' => '.ভাৰত'],
-                ['tld' => 'ファッション'],
-                ['tld' => 'XN--VERMGENSBERATUNG-PWB'],
-            ],
-        ], [
-            'valid.*.tld' => 'is_tld',
-        ]);
+        $validTlds = [
+            ['tld' => 'com'],
+            ['tld' => 'CoM'],
+            ['tld' => '.CoM'],
+            ['tld' => '.ভাৰত'],
+            ['tld' => 'ファッション'],
+            ['tld' => 'XN--VERMGENSBERATUNG-PWB'],
+        ];
 
-        $this->assertFalse($validator->fails());
+        foreach ($validTlds as $tld) {
+            /** @var \Illuminate\Validation\Validator $validator */
+            $validator = \Validator::make($tld, [
+                'tld' => 'is_tld',
+            ]);
+
+            $this->assertFalse($validator->fails());
+        }
     }
 
     /**
@@ -36,21 +38,23 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
      */
     public function test_invalid_domains_with_is_tld()
     {
-        /** @var \Illuminate\Validation\Validator $validator */
-        $validator = \Validator::make([
-            'invalid' => [
-                ['tld' => 'coom'],
-                ['tld' => '.C.o.M'],
-                ['tld' => 'Blablbal'],
-                ['tld' => 'c o m'],
-                ['tld' => 'рaф'],
-                ['tld' => 'ققط'],
-            ],
-        ], [
-            'invalid.*.tld' => 'is_tld',
-        ]);
+        $invalidTlds = [
+            ['tld' => 'coom'],
+            ['tld' => '.C.o.M'],
+            ['tld' => 'Blablbal'],
+            ['tld' => 'c o m'],
+            ['tld' => 'рaф'],
+            ['tld' => 'ققط'],
+        ];
 
-        $this->assertTrue($validator->fails());
+        foreach ($invalidTlds as $tld) {
+            /** @var \Illuminate\Validation\Validator $validator */
+            $validator = \Validator::make($tld, [
+                'tld' => 'is_tld',
+            ]);
+
+            $this->assertTrue($validator->fails());
+        }
     }
 
     /**
@@ -58,20 +62,22 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
      */
     public function test_valid_domains_with_ends_with_tld()
     {
-        /** @var \Illuminate\Validation\Validator $validator */
-        $validator = \Validator::make([
-            'valid' => [
-                ['tld' => 'google.com'],
-                ['tld' => 'gOOgle.CoM'],
-                ['tld' => 'кто.рф'],
-                ['tld' => 'Deutsche.Vermögensberatung.vermögensberater'],
-                ['tld' => 'الاعلى-للاتصالات.قطر'],
-            ],
-        ], [
-            'valid.*.tld' => 'ends_with_tld',
-        ]);
+        $validTlds = [
+            ['tld' => 'google.com'],
+            ['tld' => 'gOOgle.CoM'],
+            ['tld' => 'кто.рф'],
+            ['tld' => 'Deutsche.Vermögensberatung.vermögensberater'],
+            ['tld' => 'الاعلى-للاتصالات.قطر'],
+        ];
 
-        $this->assertFalse($validator->fails());
+        foreach ($validTlds as $tld) {
+            /** @var \Illuminate\Validation\Validator $validator */
+            $validator = \Validator::make($tld, [
+                'tld' => 'ends_with_tld',
+            ]);
+
+            $this->assertFalse($validator->fails());
+        }
     }
 
     /**
@@ -79,21 +85,23 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
      */
     public function test_invalid_domains_with_ends_with_tld()
     {
-        /** @var \Illuminate\Validation\Validator $validator */
-        $validator = \Validator::make([
-            'invalid' => [
-                ['tld' => 'googlecoom'],
-                ['tld' => 'gooogle.C.o.M'],
-                ['tld' => 'google.Blablbal'],
-                ['tld' => 'google.c o m'],
-                ['tld' => 'кто.рaф'],
-                ['tld' => 'الاعلى-للاتصالات.ققط'],
-            ],
-        ], [
-            'invalid.*.tld' => 'ends_with_tld',
-        ]);
+        $invalidTlds = [
+            ['tld' => 'googlecoom'],
+            ['tld' => 'gooogle.C.o.M'],
+            ['tld' => 'google.Blablbal'],
+            ['tld' => 'google.c o m'],
+            ['tld' => 'кто.рaф'],
+            ['tld' => 'الاعلى-للاتصالات.ققط'],
+        ];
 
-        $this->assertTrue($validator->fails());
+        foreach ($invalidTlds as $tld) {
+            /** @var \Illuminate\Validation\Validator $validator */
+            $validator = \Validator::make($tld, [
+                'tld' => 'ends_with_tld',
+            ]);
+
+            $this->assertTrue($validator->fails());
+        }
     }
 
     /**
