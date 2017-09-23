@@ -18,8 +18,11 @@
         "ext-intl": "*"
     },
     "require-dev": {
-        "orchestra/testbench": "~3.5",
-        "phpunit/phpunit": "^6.3"
+        "orchestra/testbench": "~3.0",
+        "phpunit/phpunit": "~6.0"
+    },
+    "suggest": {
+        "illuminate/validation": "Required for Laravel validation"
     },
     "autoload": {
         "psr-4": {
