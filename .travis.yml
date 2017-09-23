@@ -2,19 +2,39 @@ language: php
 
 sudo: false
 
-php:
-  - 7.0
-  - 7.1
-
 cache:
   directories:
     - $HOME/.composer/cache
 
+matrix:
+  include:
+    - php: 7.0
+      env: LARAVEL_VERSION=5.1.*
+    - php: 7.0
+      env: LARAVEL_VERSION=5.2.*
+    - php: 7.0
+      env: LARAVEL_VERSION=5.3.*
+    - php: 7.0
+      env: LARAVEL_VERSION=5.4.*
+    - php: 7.0
+      env: LARAVEL_VERSION=5.5.*
+    - php: 7.1
+      env: LARAVEL_VERSION=5.1.*
+    - php: 7.1
+      env: LARAVEL_VERSION=5.2.*
+    - php: 7.1
+      env: LARAVEL_VERSION=5.3.*
+    - php: 7.1
+      env: LARAVEL_VERSION=5.4.*
+    - php: 7.1
+      env: LARAVEL_VERSION=5.5.*
+
 before_install:
-  - travis_retry composer self-update
+  - composer self-update --stable -n
+  - composer require "laravel/framework:${LARAVEL_VERSION}" --no-update --no-interaction --dev
 
 install:
-  - travis_retry composer update --no-interaction
+  - travis_retry composer update --no-suggest --no-interaction
 
 script:
   - vendor/bin/phpunit --coverage-clover=coverage.xml
