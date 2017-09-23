@@ -9,32 +9,50 @@ cache:
 matrix:
   include:
     - php: 7.0
+      env: LARAVEL_VERSION=5.0.*
+      env: ORCHESTRA_VERSION=3.0.*
+    - php: 7.0
       env: LARAVEL_VERSION=5.1.*
+      env: ORCHESTRA_VERSION=3.1.*
     - php: 7.0
       env: LARAVEL_VERSION=5.2.*
+      env: ORCHESTRA_VERSION=3.2.*
     - php: 7.0
       env: LARAVEL_VERSION=5.3.*
+      env: ORCHESTRA_VERSION=3.3.*
     - php: 7.0
       env: LARAVEL_VERSION=5.4.*
+      env: ORCHESTRA_VERSION=3.4.*
     - php: 7.0
       env: LARAVEL_VERSION=5.5.*
+      env: ORCHESTRA_VERSION=3.5.*
+    - php: 7.1
+      env: LARAVEL_VERSION=5.0.*
+      env: ORCHESTRA_VERSION=3.0.*
     - php: 7.1
       env: LARAVEL_VERSION=5.1.*
+      env: ORCHESTRA_VERSION=3.1.*
     - php: 7.1
       env: LARAVEL_VERSION=5.2.*
+      env: ORCHESTRA_VERSION=3.2.*
     - php: 7.1
       env: LARAVEL_VERSION=5.3.*
+      env: ORCHESTRA_VERSION=3.3.*
     - php: 7.1
       env: LARAVEL_VERSION=5.4.*
+      env: ORCHESTRA_VERSION=3.4.*
     - php: 7.1
       env: LARAVEL_VERSION=5.5.*
+      env: ORCHESTRA_VERSION=3.5.*
 
 before_install:
   - composer self-update --stable -n
   - composer require "laravel/framework:${LARAVEL_VERSION}" --no-update --no-interaction --dev
+  - composer require "orchestra/testbench:${ORCHESTRA_VERSION}" --no-update --no-interaction --dev
 
 install:
   - travis_retry composer update --no-suggest --no-interaction
+  - composer info
 
 script:
   - vendor/bin/phpunit --coverage-clover=coverage.xml
