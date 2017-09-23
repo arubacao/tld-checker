@@ -133,6 +133,6 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
         ]);
 
         $this->assertTrue($validator->fails());
-        $this->assertSame('The invalid file does not end with a valid tld.', $validator->messages()->first());
+        $this->assertSame('The invalid field does not end with a valid tld.', $validator->messages()->first());
     }
 }

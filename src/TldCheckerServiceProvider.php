@@ -28,7 +28,7 @@ class TldCheckerServiceProvider extends ServiceProvider
             function ($attr, $value, $param, $validator) {
                 return TldValidator::endsWithTld($value);
             },
-            'The :attribute file does not end with a valid tld.'
+            'The :attribute field does not end with a valid tld.'
         );
     }
 
