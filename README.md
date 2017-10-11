@@ -1,4 +1,4 @@
-# Very short description of the package
+# TLD Checker
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/arubacao/tld-checker.svg?style=flat-square)](https://packagist.org/packages/arubacao/tld-checker)
 [![Build Status](https://img.shields.io/travis/arubacao/tld-checker/master.svg?style=flat-square)](https://travis-ci.org/arubacao/tld-checker)
@@ -7,7 +7,9 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/arubacao/tld-checker.svg?style=flat-square)](https://packagist.org/packages/arubacao/tld-checker)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+Validates a string to determine if it is a TLD(Top Level Domain) or ends with a TLD
+* Unicode support
+* Laravel Validator Extension
 
 ## Installation
 
@@ -18,10 +20,44 @@ composer require arubacao/tld-checker
 ```
 
 ## Usage
+### Standalone
 
 ``` php
-$skeleton = new Spatie\Skeleton();
-echo $skeleton->echoPhrase('Hello, Spatie!');
+use Arubacao\TldChecker\Validator
+
+// Is it a TLD
+Validator::isTld('COM')
+// returns true
+
+Validator::isTld('FOO')
+// returns false
+
+// Does it end with a TLD
+Validator::endsWithTld('GOOGLE.COM')
+// returns true
+
+Validator::endsWithTld('GOOGLE.COMM')
+// returns false
+
+```
+
+### Extend Laravel Validator
+
+#### Register the Service Provider 
+
+```PHP
+'providers' => [
+    // Other Service Providers
+    Arubacao\TldChecker\Validator::class,
+],
+```
+
+#### Use the Validator
+```PHP
+$request->validate([
+    'tld' => 'required|is_tld'
+    'email' => 'required|ends_with_tld'
+]);
 ```
 
 ## Changelog
