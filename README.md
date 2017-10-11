@@ -7,12 +7,11 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/arubacao/tld-checker.svg?style=flat-square)](https://packagist.org/packages/arubacao/tld-checker)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
-Validates a string to determine if it is a TLD(Top Level Domain) or ends with a TLD
+Validates a string to determine if it is a TLD(Top Level Domain) or ends with a TLD based on the known list of valid TLDs
 * Unicode support
 * Laravel Validator Extension
 
 ## Installation
-
 You can install the package via composer:
 
 ```bash
@@ -20,6 +19,7 @@ composer require arubacao/tld-checker
 ```
 
 ## Usage
+
 ### Standalone
 
 ``` php
@@ -60,15 +60,15 @@ $request->validate([
 ]);
 ```
 
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
 ## Testing
 
 ``` bash
 composer test
 ```
+
+## Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
 ## Contributing
 
