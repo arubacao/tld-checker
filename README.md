@@ -1,4 +1,4 @@
-# Package Description
+# TLD Checker
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/arubacao/tld-checker.svg?style=flat-square)](https://packagist.org/packages/arubacao/tld-checker)
 [![Build Status](https://img.shields.io/travis/arubacao/tld-checker/master.svg?style=flat-square)](https://travis-ci.org/arubacao/tld-checker)
@@ -7,7 +7,9 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/arubacao/tld-checker.svg?style=flat-square)](https://packagist.org/packages/arubacao/tld-checker)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
-This package allows validation of top level domains against the known list of valid TLDs
+Validates a string to determine if it is a TLD(Top Level Domain) or ends with a TLD based on the known list of valid TLDs
+* Unicode support
+* Laravel Validator Extension
 
 ## Installation
 You can install the package via composer:
@@ -17,24 +19,45 @@ composer require arubacao/tld-checker
 ```
 
 ## Usage
-You can check a TLD directly using `Validator::isTld()`
-``` php
-use Arubacao\TldChecker\Validator;
 
-$success = Validator::isTld('com');     // true
-$success = Validator::isTld('CN');      // true
-$success = Validator::isTld('apricot'); // false
+### Standalone
+
+``` php
+use Arubacao\TldChecker\Validator
+
+// Is it a TLD
+Validator::isTld('COM')
+// returns true
+
+Validator::isTld('FOO')
+// returns false
+
+// Does it end with a TLD
+Validator::endsWithTld('GOOGLE.COM')
+// returns true
+
+Validator::endsWithTld('GOOGLE.COMM')
+// returns false
 
 ```
 
-You can also check that a string ends with a valid TLD using `Validator::endsWithTld()`
-``` php
-use Arubacao\TldChecker\Validator;
+### Extend Laravel Validator
 
-$success = Validator::endsWithTld('apple.com');       // true
-$success = Validator::endsWithTld('NEWS.CN');         // true
-$success = Validator::endsWithTld('farming.apricot'); // false
+#### Register the Service Provider 
 
+```PHP
+'providers' => [
+    // Other Service Providers
+    Arubacao\TldChecker\Validator::class,
+],
+```
+
+#### Use the Validator
+```PHP
+$request->validate([
+    'tld' => 'required|is_tld'
+    'email' => 'required|ends_with_tld'
+]);
 ```
 
 ## Testing
