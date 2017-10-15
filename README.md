@@ -16,6 +16,15 @@ You can install the package via composer:
 composer require arubacao/tld-checker
 ```
 
+If you would like to use this package with the [Laravel Validator](https://laravel.com/docs/validation/latest), you must also register the service provider:
+```PHP
+// config/app.php
+'providers' => [
+    // Other Service Providers
+    Arubacao\TldChecker\Validator::class,
+],
+```
+
 ## Usage
 You can check a TLD directly using `Validator::isTld()`
 ``` php
@@ -35,6 +44,18 @@ $success = Validator::endsWithTld('apple.com');       // true
 $success = Validator::endsWithTld('NEWS.CN');         // true
 $success = Validator::endsWithTld('farming.apricot'); // false
 
+```
+
+This package extends the [Laravel Validator](https://laravel.com/docs/validation/latest) with these 2 methods:
+ * `is_tld`
+ * `ends_with_tld`
+ 
+You can use them like this:
+```PHP
+$request->validate([
+    'tld' => 'required|is_tld'
+    'email' => 'required|ends_with_tld'
+]);
 ```
 
 ## Testing
