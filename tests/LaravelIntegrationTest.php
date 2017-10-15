@@ -9,10 +9,8 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
         return [\Arubacao\TldChecker\TldCheckerServiceProvider::class];
     }
 
-    /**
-     * @test
-     */
-    public function test_valid_domains_with_is_tld()
+    /** @test */
+    public function is_tld_does_not_fail_if_domain_is_tld()
     {
         $validTlds = [
             ['tld' => 'com'],
@@ -24,7 +22,6 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
         ];
 
         foreach ($validTlds as $tld) {
-            /** @var \Illuminate\Validation\Validator $validator */
             $validator = \Validator::make($tld, [
                 'tld' => 'is_tld',
             ]);
@@ -33,10 +30,8 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
         }
     }
 
-    /**
-     * @test
-     */
-    public function test_invalid_domains_with_is_tld()
+    /** @test */
+    public function is_tld_fails_if_domain_is_not_tld()
     {
         $invalidTlds = [
             ['tld' => 'coom'],
@@ -48,7 +43,6 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
         ];
 
         foreach ($invalidTlds as $tld) {
-            /** @var \Illuminate\Validation\Validator $validator */
             $validator = \Validator::make($tld, [
                 'tld' => 'is_tld',
             ]);
@@ -57,10 +51,8 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
         }
     }
 
-    /**
-     * @test
-     */
-    public function test_valid_domains_with_ends_with_tld()
+    /** @test */
+    public function ends_with_tld_does_not_fail_when_domain_ends_with_tld()
     {
         $validTlds = [
             ['tld' => 'google.com'],
@@ -71,7 +63,6 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
         ];
 
         foreach ($validTlds as $tld) {
-            /** @var \Illuminate\Validation\Validator $validator */
             $validator = \Validator::make($tld, [
                 'tld' => 'ends_with_tld',
             ]);
@@ -80,10 +71,8 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
         }
     }
 
-    /**
-     * @test
-     */
-    public function test_invalid_domains_with_ends_with_tld()
+    /** @test */
+    public function ends_with_tld_fails_when_domain_does_not_end_with_tld()
     {
         $invalidTlds = [
             ['tld' => 'googlecoom'],
@@ -95,7 +84,6 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
         ];
 
         foreach ($invalidTlds as $tld) {
-            /** @var \Illuminate\Validation\Validator $validator */
             $validator = \Validator::make($tld, [
                 'tld' => 'ends_with_tld',
             ]);
@@ -104,12 +92,9 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
         }
     }
 
-    /**
-     * @test
-     */
-    public function is_tld_throws_error_message()
+    /** @test */
+    public function is_tld_fails_and_has_message_when_domain_is_not_tld()
     {
-        /** @var \Illuminate\Validation\Validator $validator */
         $validator = \Validator::make([
             'invalid' => 'coom',
         ], [
@@ -120,12 +105,9 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
         $this->assertSame('The invalid field is not a valid tld.', $validator->messages()->first());
     }
 
-    /**
-     * @test
-     */
-    public function ends_with_tld_throws_error_message()
+    /** @test */
+    public function ends_with_tld_fails_and_has_message_when_domain_does_not_end_with_tld()
     {
-        /** @var \Illuminate\Validation\Validator $validator */
         $validator = \Validator::make([
             'invalid' => 'googlecoom',
         ], [
