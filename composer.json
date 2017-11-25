@@ -1,15 +1,16 @@
 {
     "name": "arubacao/tld-checker",
-    "description": "place holder description",
+    "description": "Top Level Domain (TLD) validation library for PHP",
     "keywords": [
-        "tld-checker"
+        "tld-checker",
+        "tld",
+        "validation"
     ],
     "homepage": "https://github.com/arubacao/tld-checker",
     "license": "MIT",
     "authors": [
         {
             "name": "Christopher Lass",
-            "email": "arubacao@gmail.com",
             "homepage": "https://github.com/arubacao"
         }
     ],
