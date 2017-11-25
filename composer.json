@@ -4,7 +4,9 @@
     "keywords": [
         "tld-checker",
         "tld",
-        "validation"
+        "validation",
+        "email",
+        "domain"
     ],
     "homepage": "https://github.com/arubacao/tld-checker",
     "license": "MIT",
