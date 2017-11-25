@@ -18,6 +18,7 @@ namespace Arubacao\TldChecker;
  * including gTLDs such as .com, and country-code TLDs such as .uk.
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
+ *
  * @version %VERSION%
  */
 class RootZoneDatabase

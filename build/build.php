@@ -43,8 +43,8 @@ if (0 !== strpos($root_zone_data_version, '#')) {
 
 $replacements = [
     '%GENERATED%' => date('Y-m-d H:i:s'),
-    '%VERSION%' => $root_zone_data_version,
-    '%TLDS%' => var_export($tlds, true),
+    '%VERSION%'   => $root_zone_data_version,
+    '%TLDS%'      => var_export($tlds, true),
 ];
 $output = file_get_contents(TEMPLATE);
 $output = str_replace(array_keys($replacements), array_values($replacements), $output);

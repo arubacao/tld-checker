@@ -7,7 +7,8 @@ class Validator
     /**
      * Checks if value is valid tld.
      *
-     * @param  mixed $value
+     * @param mixed $value
+     *
      * @return bool
      */
     public static function isTld($value)
@@ -26,7 +27,8 @@ class Validator
     /**
      * Checks if value is valid tld.
      *
-     * @param  mixed $value
+     * @param mixed $value
+     *
      * @return bool
      */
     public static function endsWithTld($value)

@@ -2,8 +2,8 @@
 
 namespace Arubacao\TldChecker\Test;
 
-use PHPUnit\Framework\TestCase;
 use Arubacao\TldChecker\Validator;
+use PHPUnit\Framework\TestCase;
 
 class ValidatorTest extends TestCase
 {

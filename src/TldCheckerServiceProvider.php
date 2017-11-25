@@ -2,9 +2,9 @@
 
 namespace Arubacao\TldChecker;
 
-use Validator;
-use Illuminate\Support\ServiceProvider;
 use Arubacao\TldChecker\Validator as TldValidator;
+use Illuminate\Support\ServiceProvider;
+use Validator;
 
 class TldCheckerServiceProvider extends ServiceProvider
 {
