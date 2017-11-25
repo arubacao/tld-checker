@@ -2,8 +2,8 @@
 
 namespace Arubacao\TldChecker\Test;
 
-use Arubacao\TldChecker\RootZoneDatabase;
 use PHPUnit\Framework\TestCase;
+use Arubacao\TldChecker\RootZoneDatabase;
 
 class RootZoneDatabaseTest extends TestCase
 {
