@@ -2,6 +2,10 @@ language: php
 
 sudo: false
 
+notifications:
+  email:
+    on_success: never
+
 cache:
   directories:
     - $HOME/.composer/cache
