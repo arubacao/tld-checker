@@ -30,10 +30,8 @@ matrix:
       env: LARAVEL=5.0.* TESTBENCH=3.0.* PHPUNIT=4.8.*
 
 before_install:
-  - composer self-update --stable -n
-  - composer require "laravel/framework:${LARAVEL}" --no-update --no-interaction --dev
-  - composer require "orchestra/testbench:${TESTBENCH}" --no-update --no-interaction --dev
-  - composer require "phpunit/phpunit:${PHPUNIT}" --no-update --no-interaction --dev
+  - composer self-update --stable --no-interaction
+  - composer require laravel/framework:$LARAVEL orchestra/testbench:$TESTBENCH phpunit/phpunit:$PHPUNIT --no-update --no-interaction --dev
 
 install:
   - travis_retry composer update --no-suggest --no-interaction
