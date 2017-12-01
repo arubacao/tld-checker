@@ -17,23 +17,23 @@ php:
 
 env:
   matrix:
-  - LARAVEL=5.0.* TESTBENCH=3.0.* PHPUNIT_VERSION=4.8.*
-  - LARAVEL=5.1.* TESTBENCH=3.1.* PHPUNIT_VERSION=5.7.*
-  - LARAVEL=5.2.* TESTBENCH=3.2.* PHPUNIT_VERSION=5.7.*
-  - LARAVEL=5.3.* TESTBENCH=3.3.* PHPUNIT_VERSION=5.7.*
-  - LARAVEL=5.4.* TESTBENCH=3.4.* PHPUNIT_VERSION=5.7.*
-  - LARAVEL=5.5.* TESTBENCH=3.5.* PHPUNIT_VERSION=~6.0
+  - LARAVEL=5.0.* TESTBENCH=3.0.* PHPUNIT=4.8.*
+  - LARAVEL=5.1.* TESTBENCH=3.1.* PHPUNIT=5.7.*
+  - LARAVEL=5.2.* TESTBENCH=3.2.* PHPUNIT=5.7.*
+  - LARAVEL=5.3.* TESTBENCH=3.3.* PHPUNIT=5.7.*
+  - LARAVEL=5.4.* TESTBENCH=3.4.* PHPUNIT=5.7.*
+  - LARAVEL=5.5.* TESTBENCH=3.5.* PHPUNIT=~6.0
 
 matrix:
   exclude:
     - php: 7.2
-      env: LARAVEL=5.0.* TESTBENCH=3.0.* PHPUNIT_VERSION=4.8.*
+      env: LARAVEL=5.0.* TESTBENCH=3.0.* PHPUNIT=4.8.*
 
 before_install:
   - composer self-update --stable -n
-  - composer require "laravel/framework:${LARAVEL_VERSION}" --no-update --no-interaction --dev
-  - composer require "orchestra/testbench:${ORCHESTRA_VERSION}" --no-update --no-interaction --dev
-  - composer require "phpunit/phpunit:${PHPUNIT_VERSION}" --no-update --no-interaction --dev
+  - composer require "laravel/framework:${LARAVEL}" --no-update --no-interaction --dev
+  - composer require "orchestra/testbench:${ORCHESTRA}" --no-update --no-interaction --dev
+  - composer require "phpunit/phpunit:${PHPUNIT}" --no-update --no-interaction --dev
 
 install:
   - travis_retry composer update --no-suggest --no-interaction
