@@ -32,7 +32,7 @@ matrix:
 before_install:
   - composer self-update --stable -n
   - composer require "laravel/framework:${LARAVEL}" --no-update --no-interaction --dev
-  - composer require "orchestra/testbench:${ORCHESTRA}" --no-update --no-interaction --dev
+  - composer require "orchestra/testbench:${TESTBENCH}" --no-update --no-interaction --dev
   - composer require "phpunit/phpunit:${PHPUNIT}" --no-update --no-interaction --dev
 
 install:
