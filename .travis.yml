@@ -10,99 +10,24 @@ cache:
   directories:
     - $HOME/.composer/cache
 
+php:
+  - 7.0
+  - 7.1
+  - 7.2
+
+env:
+  matrix:
+  - LARAVEL=5.0.* TESTBENCH=3.0.* PHPUNIT_VERSION=4.8.*
+  - LARAVEL=5.1.* TESTBENCH=3.1.* PHPUNIT_VERSION=5.7.*
+  - LARAVEL=5.2.* TESTBENCH=3.2.* PHPUNIT_VERSION=5.7.*
+  - LARAVEL=5.3.* TESTBENCH=3.3.* PHPUNIT_VERSION=5.7.*
+  - LARAVEL=5.4.* TESTBENCH=3.4.* PHPUNIT_VERSION=5.7.*
+  - LARAVEL=5.5.* TESTBENCH=3.5.* PHPUNIT_VERSION=~6.0
+
 matrix:
-  include:
-    - php: 7.0
-      env:
-        - LARAVEL_VERSION=5.0.*
-        - ORCHESTRA_VERSION=3.0.*
-        - PHPUNIT_VERSION=4.8.*
-    - php: 7.0
-      env:
-        - LARAVEL_VERSION=5.1.*
-        - ORCHESTRA_VERSION=3.1.*
-        - PHPUNIT_VERSION=5.7.*
-    - php: 7.0
-      env:
-        - LARAVEL_VERSION=5.2.*
-        - ORCHESTRA_VERSION=3.2.*
-        - PHPUNIT_VERSION=5.7.*
-    - php: 7.0
-      env:
-        - LARAVEL_VERSION=5.3.*
-        - ORCHESTRA_VERSION=3.3.*
-        - PHPUNIT_VERSION=5.7.*
-    - php: 7.0
-      env:
-        - LARAVEL_VERSION=5.4.*
-        - ORCHESTRA_VERSION=3.4.*
-        - PHPUNIT_VERSION=5.7.*
-    - php: 7.0
-      env:
-        - LARAVEL_VERSION=5.5.*
-        - ORCHESTRA_VERSION=3.5.*
-        - PHPUNIT_VERSION=~6.0
-    - php: 7.1
-      env:
-        - LARAVEL_VERSION=5.0.*
-        - ORCHESTRA_VERSION=3.0.*
-        - PHPUNIT_VERSION=4.8.*
-    - php: 7.1
-      env:
-        - LARAVEL_VERSION=5.1.*
-        - ORCHESTRA_VERSION=3.1.*
-        - PHPUNIT_VERSION=5.7.*
-    - php: 7.1
-      env:
-        - LARAVEL_VERSION=5.2.*
-        - ORCHESTRA_VERSION=3.2.*
-        - PHPUNIT_VERSION=5.7.*
-    - php: 7.1
-      env:
-        - LARAVEL_VERSION=5.3.*
-        - ORCHESTRA_VERSION=3.3.*
-        - PHPUNIT_VERSION=5.7.*
-    - php: 7.1
-      env:
-        - LARAVEL_VERSION=5.4.*
-        - ORCHESTRA_VERSION=3.4.*
-        - PHPUNIT_VERSION=5.7.*
-    - php: 7.1
-      env:
-        - LARAVEL_VERSION=5.5.*
-        - ORCHESTRA_VERSION=3.5.*
-        - PHPUNIT_VERSION=~6.0
+  exclude:
     - php: 7.2
-      env:
-        - LARAVEL_VERSION=5.0.*
-        - ORCHESTRA_VERSION=3.0.*
-        - PHPUNIT_VERSION=4.8.*
-    - php: 7.2
-      env:
-        - LARAVEL_VERSION=5.1.*
-        - ORCHESTRA_VERSION=3.1.*
-        - PHPUNIT_VERSION=5.7.*
-    - php: 7.2
-      env:
-        - LARAVEL_VERSION=5.2.*
-        - ORCHESTRA_VERSION=3.2.*
-        - PHPUNIT_VERSION=5.7.*
-    - php: 7.2
-      env:
-        - LARAVEL_VERSION=5.3.*
-        - ORCHESTRA_VERSION=3.3.*
-        - PHPUNIT_VERSION=5.7.*
-    - php: 7.2
-      env:
-        - LARAVEL_VERSION=5.4.*
-        - ORCHESTRA_VERSION=3.4.*
-        - PHPUNIT_VERSION=5.7.*
-    - php: 7.2
-      env:
-        - LARAVEL_VERSION=5.5.*
-        - ORCHESTRA_VERSION=3.5.*
-        - PHPUNIT_VERSION=~6.0
-        
+      env: LARAVEL=5.0.* TESTBENCH=3.0.* PHPUNIT_VERSION=4.8.*
 
 before_install:
   - composer self-update --stable -n
