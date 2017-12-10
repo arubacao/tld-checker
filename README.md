@@ -40,19 +40,23 @@ Check a TLD using `Validator::isTld()`:
 ``` php
 use Arubacao\TldChecker\Validator;
 
-$success = Validator::isTld('com');     // true
-$success = Validator::isTld('CN');      // true (case insensitiv)
-$success = Validator::isTld('.org');    // true (allows dot prefix)
-$success = Validator::isTld('apricot'); // false
+Validator::isTld('com');        // true
+Validator::isTld('CN');         // true (case insensitiv)
+Validator::isTld('москва');     // true (works with internationalized domain name (IDN) | unicode)
+Validator::isTld('XN--CZRS0T'); // true (works with encoded IDN | 商店)
+Validator::isTld('.org');       // true (allows dot prefix)
+Validator::isTld('apricot');    // false
 ```
 
 Check if a string ends with a valid TLD using `Validator::endsWithTld()`:
 ``` php
 use Arubacao\TldChecker\Validator;
 
-$success = Validator::endsWithTld('apple.com');       // true
-$success = Validator::endsWithTld('NEWS.CN');         // true (case insensitiv)
-$success = Validator::endsWithTld('farming.apricot'); // false
+Validator::endsWithTld('apple.com');                            // true
+Validator::endsWithTld('NEWS.CN');                              // true (case insensitiv)
+Validator::endsWithTld('müller.vermögensberater');              // true (works with internationalized domain name (IDN) | unicode)
+Validator::endsWithTld('xn--mller-kva.xn--vermgensberater-ctb');// true (works with encoded IDN | müller.vermögensberater)
+Validator::endsWithTld('farming.apricot');                      // false
 
 ```
 
