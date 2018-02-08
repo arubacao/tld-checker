@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/arubacao/tld-checker.svg?style=flat-square)](https://packagist.org/packages/arubacao/tld-checker)
 [![Build Status](https://img.shields.io/travis/arubacao/tld-checker/master.svg?style=flat-square)](https://travis-ci.org/arubacao/tld-checker)
-[![codecov](https://codecov.io/gh/arubacao/tld-checker/branch/master/graph/badge.svg?style=flat-square)](https://codecov.io/gh/arubacao/tld-checker)
+[![Codecov](https://img.shields.io/codecov/c/github/arubacao/tld-checker.svg?style=flat-square)](https://codecov.io/gh/arubacao/tld-checker)
 [![Quality Score](https://img.shields.io/scrutinizer/g/arubacao/tld-checker.svg?style=flat-square)](https://scrutinizer-ci.com/g/arubacao/tld-checker)
 [![Total Downloads](https://img.shields.io/packagist/dt/arubacao/tld-checker.svg?style=flat-square)](https://packagist.org/packages/arubacao/tld-checker)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
@@ -22,7 +22,8 @@ composer require arubacao/tld-checker
 
 #### Laravel
 
-If you would like to use `arubacao/tld-checker` with the [Laravel Validator](https://laravel.com/docs/validation/latest), you must also register the service provider:
+If you would like to use `arubacao/tld-checker` with the [Laravel Validator](https://laravel.com/docs/validation/latest), you must also register the service provider:  
+*(only required for Laravel `<=5.4`, for Laravel `>=5.5` [auto-discovery](composer.json#L55) is enabled.)*
 ```PHP
 // config/app.php
 
@@ -33,8 +34,7 @@ If you would like to use `arubacao/tld-checker` with the [Laravel Validator](htt
 ```
 Notes:  
 
- - only required for Laravel `<=5.4`, for Laravel `>=5.5` [auto-discovery](composer.json#L55) is enabled.
- - `arubacao/tld-checker` is functional and fully tested for Laravel `5.0`, `5.1`, `5.2`, `5.3`, `5.4`, `5.5`.  
+ - `arubacao/tld-checker` is functional and fully tested for Laravel `5.0`, `5.1`, `5.2`, `5.3`, `5.4`, `5.5`, `5.6`.  
 ## Usage
 Check a TLD using `Validator::isTld()`:
 ``` php
