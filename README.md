@@ -29,7 +29,7 @@ If you would like to use `arubacao/tld-checker` with the [Laravel Validator](htt
 
 'providers' => [
     // Other Service Providers
-    Arubacao\TldChecker\Validator::class,
+    Arubacao\TldChecker\TldCheckerServiceProvider::class,
 ],
 ```
 Notes:  
