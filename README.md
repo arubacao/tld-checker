@@ -5,7 +5,6 @@
 [![Codecov](https://img.shields.io/codecov/c/github/arubacao/tld-checker.svg?style=flat-square)](https://codecov.io/gh/arubacao/tld-checker)
 [![Quality Score](https://img.shields.io/scrutinizer/g/arubacao/tld-checker.svg?style=flat-square)](https://scrutinizer-ci.com/g/arubacao/tld-checker)
 [![Total Downloads](https://img.shields.io/packagist/dt/arubacao/tld-checker.svg?style=flat-square)](https://packagist.org/packages/arubacao/tld-checker)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
 This package allows **validation** of **top level domains** against the official [The DNS Root Zone](https://www.iana.org/domains/root) database from [iana.org](iana.org).  
 Use this to validate e.g. **domains** or **email addresses**.  
