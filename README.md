@@ -67,7 +67,7 @@ This package extends the [Laravel Validator](https://laravel.com/docs/validation
 Use them as follows:
 ```PHP
 $request->validate([
-    'tld' => 'required|is_tld'
+    'tld' => 'required|is_tld',
     'email' => 'required|ends_with_tld'
 ]);
 ```
