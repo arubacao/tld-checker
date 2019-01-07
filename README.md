@@ -6,7 +6,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/arubacao/tld-checker.svg?style=flat-square)](https://scrutinizer-ci.com/g/arubacao/tld-checker)
 [![Total Downloads](https://img.shields.io/packagist/dt/arubacao/tld-checker.svg?style=flat-square)](https://packagist.org/packages/arubacao/tld-checker)
 
-This package allows **validation** of **top level domains** against the official [The DNS Root Zone](https://www.iana.org/domains/root) database from [iana.org](iana.org).  
+This package allows **validation** of **top level domains** against the official [The DNS Root Zone](https://www.iana.org/domains/root) database from [iana.org](https://www.iana.org/).  
 Use this to validate e.g. **domains** or **email addresses**.  
 > [The DNS Root Zone](https://www.iana.org/domains/root) is the upper-most part of the DNS hierarchy, and involves delegating administrative responsibility of “top-level domains”, which are the last segment of a domain name, such as .com, .uk and .nz.
 
@@ -22,7 +22,7 @@ composer require arubacao/tld-checker
 #### Laravel
 
 If you would like to use `arubacao/tld-checker` with the [Laravel Validator](https://laravel.com/docs/validation/latest), you must also register the service provider:  
-*(only required for Laravel `<=5.4`, for Laravel `>=5.5` [auto-discovery](composer.json#L55) is enabled.)*
+*(only required for Laravel `<=5.4`, for Laravel `>=5.5` [auto-discovery](composer.json#L36) is enabled.)*
 ```PHP
 // config/app.php
 

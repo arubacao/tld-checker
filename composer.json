@@ -13,7 +13,7 @@
     "authors": [
         {
             "name": "Christopher Lass",
-            "homepage": "https://github.com/arubacao"
+            "homepage": "https://c-lass.com/"
         }
     ],
     "require": {
@@ -27,6 +27,16 @@
     "suggest": {
         "illuminate/validation": "Required for Laravel validation"
     },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Arubacao\\TldChecker\\TldCheckerServiceProvider"
+            ]
+        }
+    },
     "autoload": {
         "psr-4": {
             "Arubacao\\TldChecker\\": "src"
@@ -39,15 +49,5 @@
     },
     "scripts": {
         "test": "vendor/bin/phpunit"
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Arubacao\\TldChecker\\TldCheckerServiceProvider"
-            ]
-        }
     }
 }
