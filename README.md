@@ -10,7 +10,7 @@ This package allows **validation** of **top level domains** against the official
 Use this to validate e.g. **domains** or **email addresses**.  
 > [The DNS Root Zone](https://www.iana.org/domains/root) is the upper-most part of the DNS hierarchy, and involves delegating administrative responsibility of “top-level domains”, which are the last segment of a domain name, such as .com, .uk and .nz.
 
-*The database is stored [locally](src/RootZoneDatabase.php) and is updated every week.*  
+*The database is stored [locally](src/RootZoneDatabase.php) and automatically updated for new versions.*  
 
 ## Installation
 Install this package via composer:
@@ -33,7 +33,7 @@ If you would like to use `arubacao/tld-checker` with the [Laravel Validator](htt
 ```
 Notes:  
 
- - `arubacao/tld-checker` is functional and fully tested for Laravel `5.0`, `5.1`, `5.2`, `5.3`, `5.4`, `5.5`, `5.6`, `5.7`.  
+ - `arubacao/tld-checker` is functional and fully [tested](https://travis-ci.org/arubacao/tld-checker) for PHP `7.0` - `7,3` & Laravel `5.0` - `5.7`.   
 ## Usage
 Check a TLD using `Validator::isTld()`:
 ``` php

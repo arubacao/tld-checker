@@ -19,9 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
+ * %VERSION_LINE%
  * @version %VERSION%
  */
 class RootZoneDatabase
 {
+    const VERSION = %VERSION%;
+
     const TLDS = %TLDS%;
 }
