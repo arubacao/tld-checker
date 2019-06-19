@@ -63,11 +63,18 @@ if (
     exit(0);
 }
 
+// Format array to nice string representation
+$tldsFormatted = '['.PHP_EOL;
+foreach ($tlds as $tld) {
+    $tldsFormatted .= "        '$tld',".PHP_EOL;
+}
+$tldsFormatted .= '    ]';
+
 $replacements = [
     '%GENERATED%' => date('Y-m-d H:i:s'),
     '%VERSION_LINE%' => $root_zone_data_version_line,
     '%VERSION%' => $root_zone_data_version,
-    '%TLDS%' => var_export($tlds, true),
+    '%TLDS%' => $tldsFormatted,
 ];
 $output = file_get_contents(TEMPLATE);
 $output = str_replace(array_keys($replacements), array_values($replacements), $output);
