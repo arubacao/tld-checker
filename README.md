@@ -33,7 +33,7 @@ If you would like to use `arubacao/tld-checker` with the [Laravel Validator](htt
 ```
 Notes:  
 
- - `arubacao/tld-checker` is functional and fully [tested](https://travis-ci.org/arubacao/tld-checker) for PHP `7.0` - `7.3` & Laravel `5.0` - `5.8`.   
+ - `arubacao/tld-checker` is functional and fully [tested](https://travis-ci.org/arubacao/tld-checker) for PHP `7.0` - `7.3` & Laravel `5.0` - `6.0`.   
 ## Usage
 Check a TLD using `Validator::isTld()`:
 ``` php
