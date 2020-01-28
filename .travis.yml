@@ -17,7 +17,6 @@ php:
   - 7.3
 
 env:
-  matrix:
   - TESTBENCH=3.0.* PHPUNIT=~4.8.36
   - TESTBENCH=3.1.* PHPUNIT=~5.7.21
   - TESTBENCH=3.2.* PHPUNIT=~5.7.21
@@ -45,6 +44,7 @@ matrix:
       env: TESTBENCH=3.0.* PHPUNIT=~4.8.36
     - php: 7.3
       env: TESTBENCH=3.0.* PHPUNIT=~4.8.36
+  include:
     - php: 7.3
       env: TLD_DB_TEST=1
       before_install: 'true'
