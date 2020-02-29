@@ -36,7 +36,6 @@ class RootZoneDatabase
         'ABC',
         'ABLE',
         'ABOGADO',
-        'ABUDHABI',
         'AC',
         'ACADEMY',
         'ACCENTURE',
