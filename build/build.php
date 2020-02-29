@@ -71,7 +71,6 @@ foreach ($tlds as $tld) {
 $tldsFormatted .= '    ]';
 
 $replacements = [
-    '%GENERATED%' => date('Y-m-d H:i:s'),
     '%VERSION_LINE%' => $root_zone_data_version_line,
     '%VERSION%' => $root_zone_data_version,
     '%TLDS%' => $tldsFormatted,
