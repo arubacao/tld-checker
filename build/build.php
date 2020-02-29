@@ -48,18 +48,14 @@ if (0 !== strpos($root_zone_data_version_line, '#')) {
     throw new \Exception("Version does not match typical pattern. Something must went wrong.\n");
 }
 if (
+    // Check Version
     defined('Arubacao\TldChecker\RootZoneDatabase::VERSION') &&
-    $root_zone_data_version == Arubacao\TldChecker\RootZoneDatabase::VERSION
-) {
-    echo "Root Zone Database Version Identical.\n";
-    exit(0);
-}
-
-if (
+    $root_zone_data_version == Arubacao\TldChecker\RootZoneDatabase::VERSION &&
+    // Check TLDs
     defined('Arubacao\TldChecker\RootZoneDatabase::TLDS') &&
     $tlds == Arubacao\TldChecker\RootZoneDatabase::TLDS
 ) {
-    echo "Root Zone Database TLDS Identical.\n";
+    echo "Root Zone Database is Identical.\n";
     exit(0);
 }
 
