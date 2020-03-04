@@ -28,6 +28,7 @@ env:
   - TESTBENCH=3.7.* PHPUNIT=^7.0
   - TESTBENCH=3.8.* PHPUNIT=^7.5
   - TESTBENCH=^4.0  PHPUNIT=^8.0
+  - TESTBENCH=^5.0  PHPUNIT=^8.5
 
 matrix:
   exclude:
