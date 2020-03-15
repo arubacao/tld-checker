@@ -19,12 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2020030601, Last Updated Sat Mar  7 07:07:01 2020 UTC
- * @version 2020030601
+ * # Version 2020031400, Last Updated Sat Mar 14 07:07:01 2020 UTC
+ * @version 2020031400
  */
 class RootZoneDatabase
 {
-    const VERSION = 2020030601;
+    const VERSION = 2020031400;
 
     const TLDS = [
         'AAA',
@@ -1312,7 +1312,6 @@ class RootZoneDatabase
         'VIRGIN',
         'VISA',
         'VISION',
-        'VISTAPRINT',
         'VIVA',
         'VIVO',
         'VLAANDEREN',
