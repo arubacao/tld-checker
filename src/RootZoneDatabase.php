@@ -19,12 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2020053000, Last Updated Sat May 30 07:07:01 2020 UTC
- * @version 2020053000
+ * # Version 2020060600, Last Updated Sat Jun  6 07:07:01 2020 UTC
+ * @version 2020060600
  */
 class RootZoneDatabase
 {
-    const VERSION = 2020053000;
+    const VERSION = 2020060600;
 
     const TLDS = [
         'AAA',
@@ -76,6 +76,7 @@ class RootZoneDatabase
         'ALSACE',
         'ALSTOM',
         'AM',
+        'AMAZON',
         'AMERICANEXPRESS',
         'AMERICANFAMILY',
         'AMEX',
@@ -1402,6 +1403,7 @@ class RootZoneDatabase
         'XN--C1AVG',
         'XN--C2BR7G',
         'XN--CCK2B3B',
+        'XN--CCKWCXETD',
         'XN--CG4BKI',
         'XN--CLCHC0EA0B2G2A9GCD',
         'XN--CZR694B',
@@ -1437,6 +1439,7 @@ class RootZoneDatabase
         'XN--J1AEF',
         'XN--J1AMH',
         'XN--J6W193G',
+        'XN--JLQ480N2RG',
         'XN--JLQ61U9W7B',
         'XN--JVR189M',
         'XN--KCRX77D1X4A',
