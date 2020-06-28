@@ -19,12 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2020061901, Last Updated Sat Jun 20 07:07:01 2020 UTC
- * @version 2020061901
+ * # Version 2020062700, Last Updated Sat Jun 27 07:07:01 2020 UTC
+ * @version 2020062700
  */
 class RootZoneDatabase
 {
-    const VERSION = 2020061901;
+    const VERSION = 2020062700;
 
     const TLDS = [
         'AAA',
@@ -61,7 +61,6 @@ class RootZoneDatabase
         'AGENCY',
         'AI',
         'AIG',
-        'AIGO',
         'AIRBUS',
         'AIRFORCE',
         'AIRTEL',
@@ -1445,7 +1444,6 @@ class RootZoneDatabase
         'XN--KCRX77D1X4A',
         'XN--KPRW13D',
         'XN--KPRY57D',
-        'XN--KPU716F',
         'XN--KPUT3I',
         'XN--L1ACC',
         'XN--LGBBAT1AD8J',
@@ -1486,7 +1484,6 @@ class RootZoneDatabase
         'XN--OTU796D',
         'XN--P1ACF',
         'XN--P1AI',
-        'XN--PBT977C',
         'XN--PGBS0DH',
         'XN--PSSY2U',
         'XN--Q7CE6A',
