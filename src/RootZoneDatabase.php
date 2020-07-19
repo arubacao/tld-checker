@@ -19,12 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2020071001, Last Updated Sat Jul 11 07:07:01 2020 UTC
- * @version 2020071001
+ * # Version 2020071800, Last Updated Sat Jul 18 07:07:01 2020 UTC
+ * @version 2020071800
  */
 class RootZoneDatabase
 {
-    const VERSION = 2020071001;
+    const VERSION = 2020071800;
 
     const TLDS = [
         'AAA',
@@ -1196,7 +1196,6 @@ class RootZoneDatabase
         'SX',
         'SY',
         'SYDNEY',
-        'SYMANTEC',
         'SYSTEMS',
         'SZ',
         'TAB',
