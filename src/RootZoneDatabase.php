@@ -19,12 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2020090500, Last Updated Sat Sep  5 07:07:01 2020 UTC
- * @version 2020090500
+ * # Version 2020091200, Last Updated Sat Sep 12 07:07:02 2020 UTC
+ * @version 2020091200
  */
 class RootZoneDatabase
 {
-    const VERSION = 2020090500;
+    const VERSION = 2020091200;
 
     const TLDS = [
         'AAA',
@@ -813,7 +813,6 @@ class RootZoneDatabase
         'MEN',
         'MENU',
         'MERCKMSD',
-        'METLIFE',
         'MG',
         'MH',
         'MIAMI',
