@@ -21,7 +21,7 @@
         "ext-intl": "*"
     },
     "require-dev": {
-        "orchestra/testbench": "~3.0|^4.0|^5.0",
+        "orchestra/testbench": "~3.0|^4.0|^5.0|^6.0",
         "phpunit/phpunit": "~4.8.36 || >=5.7.21"
     },
     "suggest": {
