@@ -19,12 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2020101700, Last Updated Sat Oct 17 07:07:01 2020 UTC
- * @version 2020101700
+ * # Version 2020102400, Last Updated Sat Oct 24 07:07:01 2020 UTC
+ * @version 2020102400
  */
 class RootZoneDatabase
 {
-    const VERSION = 2020101700;
+    const VERSION = 2020102400;
 
     const TLDS = [
         'AAA',
@@ -1156,6 +1156,7 @@ class RootZoneDatabase
         'SONG',
         'SONY',
         'SOY',
+        'SPA',
         'SPACE',
         'SPORT',
         'SPOT',
