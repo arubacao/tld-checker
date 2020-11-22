@@ -19,12 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2020111400, Last Updated Sat Nov 14 07:07:02 2020 UTC
- * @version 2020111400
+ * # Version 2020112100, Last Updated Sat Nov 21 07:07:01 2020 UTC
+ * @version 2020112100
  */
 class RootZoneDatabase
 {
-    const VERSION = 2020111400;
+    const VERSION = 2020112100;
 
     const TLDS = [
         'AAA',
@@ -660,7 +660,6 @@ class RootZoneDatabase
         'JAGUAR',
         'JAVA',
         'JCB',
-        'JCP',
         'JE',
         'JEEP',
         'JETZT',
