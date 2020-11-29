@@ -19,12 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2020112100, Last Updated Sat Nov 21 07:07:01 2020 UTC
- * @version 2020112100
+ * # Version 2020112800, Last Updated Sat Nov 28 07:07:01 2020 UTC
+ * @version 2020112800
  */
 class RootZoneDatabase
 {
-    const VERSION = 2020112100;
+    const VERSION = 2020112800;
 
     const TLDS = [
         'AAA',
@@ -1125,7 +1125,6 @@ class RootZoneDatabase
         'SHOUJI',
         'SHOW',
         'SHOWTIME',
-        'SHRIRAM',
         'SI',
         'SILK',
         'SINA',
