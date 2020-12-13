@@ -19,12 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2020120500, Last Updated Sat Dec  5 07:07:01 2020 UTC
- * @version 2020120500
+ * # Version 2020121200, Last Updated Sat Dec 12 07:07:01 2020 UTC
+ * @version 2020121200
  */
 class RootZoneDatabase
 {
-    const VERSION = 2020120500;
+    const VERSION = 2020121200;
 
     const TLDS = [
         'AAA',
@@ -252,7 +252,6 @@ class RootZoneDatabase
         'CBS',
         'CC',
         'CD',
-        'CEB',
         'CENTER',
         'CEO',
         'CERN',
@@ -775,7 +774,6 @@ class RootZoneDatabase
         'LTDA',
         'LU',
         'LUNDBECK',
-        'LUPIN',
         'LUXE',
         'LUXURY',
         'LV',
