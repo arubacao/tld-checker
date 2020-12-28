@@ -62,8 +62,24 @@ matrix:
       env: TESTBENCH=3.0.* PHPUNIT=~4.8.36
     - php: 8.0
       env: TESTBENCH=3.0.* PHPUNIT=~4.8.36
+    - php: 8.0
+      env: TESTBENCH=3.1.* PHPUNIT=~5.7.21
+    - php: 8.0
+      env: TESTBENCH=3.2.* PHPUNIT=~5.7.21
+    - php: 8.0
+      env: TESTBENCH=3.3.* PHPUNIT=~5.7.21
+    - php: 8.0
+      env: TESTBENCH=3.4.* PHPUNIT=~5.7.21
+    - php: 8.0
+      env: TESTBENCH=3.5.* PHPUNIT=~6.0
+    - php: 8.0
+      env: TESTBENCH=3.6.* PHPUNIT=^7.0
+    - php: 8.0
+      env: TESTBENCH=3.7.* PHPUNIT=^7.0
+    - php: 8.0
+      env: TESTBENCH=3.8.* PHPUNIT=^7.5
   include:
-    - php: 7.4
+    - php: 7.3
       env: TLD_DB_TEST=1
       before_install: 'true'
       install: php build/build.php
