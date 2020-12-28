@@ -1,7 +1,7 @@
 # Top Level Domain (TLD) validation library for PHP
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/arubacao/tld-checker.svg?style=flat-square)](https://packagist.org/packages/arubacao/tld-checker)
-[![Build Status](https://img.shields.io/travis/arubacao/tld-checker/master.svg?style=flat-square)](https://travis-ci.org/arubacao/tld-checker)
+[![Build Status](https://img.shields.io/travis/arubacao/tld-checker/master.svg?style=flat-square)](https://travis-ci.com/arubacao/tld-checker)
 [![Codecov](https://img.shields.io/codecov/c/github/arubacao/tld-checker.svg?style=flat-square)](https://codecov.io/gh/arubacao/tld-checker)
 [![Quality Score](https://img.shields.io/scrutinizer/g/arubacao/tld-checker.svg?style=flat-square)](https://scrutinizer-ci.com/g/arubacao/tld-checker)
 [![Total Downloads](https://img.shields.io/packagist/dt/arubacao/tld-checker.svg?style=flat-square)](https://packagist.org/packages/arubacao/tld-checker)
@@ -33,7 +33,7 @@ If you would like to use `arubacao/tld-checker` with the [Laravel Validator](htt
 ```
 Notes:  
 
- - `arubacao/tld-checker` is functional and fully [tested](https://travis-ci.org/arubacao/tld-checker) for PHP `7.0` - `7.4` & Laravel `5.0` - `8.x`.   
+ - `arubacao/tld-checker` is functional and fully [tested](https://travis-ci.com/arubacao/tld-checker) for PHP `7.0` - `8.0` & Laravel `5.0` - `8.x`.   
 ## Usage
 Check a TLD using `Validator::isTld()`:
 ``` php
