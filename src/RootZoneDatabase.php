@@ -19,12 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2021021300, Last Updated Sat Feb 13 07:07:01 2021 UTC
- * @version 2021021300
+ * # Version 2021022000, Last Updated Sat Feb 20 07:07:01 2021 UTC
+ * @version 2021022000
  */
 class RootZoneDatabase
 {
-    const VERSION = 2021021300;
+    const VERSION = 2021022000;
 
     const TLDS = [
         'AAA',
@@ -240,7 +240,6 @@ class RootZoneDatabase
         'CARS',
         'CASA',
         'CASE',
-        'CASEIH',
         'CASH',
         'CASINO',
         'CAT',
@@ -875,7 +874,6 @@ class RootZoneDatabase
         'NETWORK',
         'NEUSTAR',
         'NEW',
-        'NEWHOLLAND',
         'NEWS',
         'NEXT',
         'NEXTDIRECT',
