@@ -19,12 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2021032000, Last Updated Sat Mar 20 07:07:01 2021 UTC
- * @version 2021032000
+ * # Version 2021032700, Last Updated Sat Mar 27 07:07:01 2021 UTC
+ * @version 2021032700
  */
 class RootZoneDatabase
 {
-    const VERSION = 2021032000;
+    const VERSION = 2021032700;
 
     const TLDS = [
         'AAA',
@@ -488,7 +488,6 @@ class RootZoneDatabase
         'FRONTIER',
         'FTR',
         'FUJITSU',
-        'FUJIXEROX',
         'FUN',
         'FUND',
         'FURNITURE',
