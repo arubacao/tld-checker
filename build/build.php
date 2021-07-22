@@ -62,7 +62,7 @@ if (
 // Format array to nice string representation
 $tldsFormatted = '['.PHP_EOL;
 foreach ($tlds as $tld) {
-    $tldsFormatted .= "        '$tld',".PHP_EOL;
+    $tldsFormatted .= "        '$tld' => null,".PHP_EOL;
 }
 $tldsFormatted .= '    ]';
 
