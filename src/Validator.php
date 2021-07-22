@@ -16,7 +16,7 @@ class Validator
         $value = ltrim($value, '.');
         $value = idn_to_ascii($value, 0, INTL_IDNA_VARIANT_UTS46);
         $value = strtoupper($value);
-        
+
         if (array_key_exists($value, RootZoneDatabase::TLDS)) {
             return true;
         }
