@@ -41,7 +41,7 @@ $root_zone_data_version_line = array_shift($tlds);
 preg_match('/Version (.*?),/', $root_zone_data_version_line, $root_zone_data_version);
 $root_zone_data_version = $root_zone_data_version[1];
 
-if (count($tlds) <= 1500) {
+if (count($tlds) <= 1400) {
     throw new \Exception("TLDs array is too small. Something must went wrong.\n");
 }
 if (0 !== strpos($root_zone_data_version_line, '#')) {
@@ -62,7 +62,7 @@ if (
 // Format array to nice string representation
 $tldsFormatted = '['.PHP_EOL;
 foreach ($tlds as $tld) {
-    $tldsFormatted .= "        '$tld',".PHP_EOL;
+    $tldsFormatted .= "        '$tld' => null,".PHP_EOL;
 }
 $tldsFormatted .= '    ]';
 
