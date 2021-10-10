@@ -19,13 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2021100200, Last Updated Sat Oct  2 07:07:02 2021 UTC
- *
- * @version 2021100200
+ * # Version 2021100900, Last Updated Sat Oct  9 07:07:01 2021 UTC
+ * @version 2021100900
  */
 class RootZoneDatabase
 {
-    const VERSION = 2021100200;
+    const VERSION = 2021100900;
 
     const TLDS = [
         'AAA' => null,
@@ -1005,7 +1004,6 @@ class RootZoneDatabase
         'QPON' => null,
         'QUEBEC' => null,
         'QUEST' => null,
-        'QVC' => null,
         'RACING' => null,
         'RADIO' => null,
         'RAID' => null,
@@ -1178,7 +1176,6 @@ class RootZoneDatabase
         'SUZUKI' => null,
         'SV' => null,
         'SWATCH' => null,
-        'SWIFTCOVER' => null,
         'SWISS' => null,
         'SX' => null,
         'SY' => null,
