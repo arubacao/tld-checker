@@ -19,13 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2021102300, Last Updated Sat Oct 23 07:07:02 2021 UTC
- *
- * @version 2021102300
+ * # Version 2021103000, Last Updated Sat Oct 30 07:07:01 2021 UTC
+ * @version 2021103000
  */
 class RootZoneDatabase
 {
-    const VERSION = 2021102300;
+    const VERSION = 2021103000;
 
     const TLDS = [
         'AAA' => null,
@@ -850,6 +849,7 @@ class RootZoneDatabase
         'MTR' => null,
         'MU' => null,
         'MUSEUM' => null,
+        'MUSIC' => null,
         'MUTUAL' => null,
         'MV' => null,
         'MW' => null,
@@ -1355,7 +1355,6 @@ class RootZoneDatabase
         'XN--3DS443G' => null,
         'XN--3E0B707E' => null,
         'XN--3HCRJ9C' => null,
-        'XN--3OQ18VL8PN36A' => null,
         'XN--3PXU8K' => null,
         'XN--42C2D9A' => null,
         'XN--45BR5CYL' => null,
