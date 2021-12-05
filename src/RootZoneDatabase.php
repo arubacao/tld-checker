@@ -19,13 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2021112700, Last Updated Sat Nov 27 07:07:01 2021 UTC
- *
- * @version 2021112700
+ * # Version 2021120400, Last Updated Sat Dec  4 07:07:01 2021 UTC
+ * @version 2021120400
  */
 class RootZoneDatabase
 {
-    const VERSION = 2021112700;
+    const VERSION = 2021120400;
 
     const TLDS = [
         'AAA' => null,
@@ -54,7 +53,6 @@ class RootZoneDatabase
         'AERO' => null,
         'AETNA' => null,
         'AF' => null,
-        'AFAMILYCOMPANY' => null,
         'AFL' => null,
         'AFRICA' => null,
         'AG' => null,
@@ -389,7 +387,6 @@ class RootZoneDatabase
         'DRIVE' => null,
         'DTV' => null,
         'DUBAI' => null,
-        'DUCK' => null,
         'DUNLOP' => null,
         'DUPONT' => null,
         'DURBAN' => null,
@@ -523,7 +520,6 @@ class RootZoneDatabase
         'GIVES' => null,
         'GIVING' => null,
         'GL' => null,
-        'GLADE' => null,
         'GLASS' => null,
         'GLE' => null,
         'GLOBAL' => null,
@@ -907,7 +903,6 @@ class RootZoneDatabase
         'NZ' => null,
         'OBI' => null,
         'OBSERVER' => null,
-        'OFF' => null,
         'OFFICE' => null,
         'OKINAWA' => null,
         'OLAYAN' => null,
@@ -1008,7 +1003,6 @@ class RootZoneDatabase
         'QUEST' => null,
         'RACING' => null,
         'RADIO' => null,
-        'RAID' => null,
         'RE' => null,
         'READ' => null,
         'REALESTATE' => null,
@@ -1085,7 +1079,6 @@ class RootZoneDatabase
         'SCHULE' => null,
         'SCHWARZ' => null,
         'SCIENCE' => null,
-        'SCJOHNSON' => null,
         'SCOT' => null,
         'SD' => null,
         'SE' => null,
