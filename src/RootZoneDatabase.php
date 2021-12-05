@@ -20,6 +20,7 @@ namespace Arubacao\TldChecker;
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
  * # Version 2021120400, Last Updated Sat Dec  4 07:07:01 2021 UTC
+ *
  * @version 2021120400
  */
 class RootZoneDatabase
