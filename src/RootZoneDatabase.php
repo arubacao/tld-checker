@@ -19,13 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2022093002, Last Updated Sat Oct  1 07:07:02 2022 UTC
- *
- * @version 2022093002
+ * # Version 2022100800, Last Updated Sat Oct  8 07:07:01 2022 UTC
+ * @version 2022100800
  */
 class RootZoneDatabase
 {
-    const VERSION = 2022093002;
+    const VERSION = 2022100800;
 
     const TLDS = [
         'AAA' => null,
@@ -205,7 +204,6 @@ class RootZoneDatabase
         'BRUSSELS' => null,
         'BS' => null,
         'BT' => null,
-        'BUGATTI' => null,
         'BUILD' => null,
         'BUILDERS' => null,
         'BUSINESS' => null,
@@ -225,7 +223,6 @@ class RootZoneDatabase
         'CAM' => null,
         'CAMERA' => null,
         'CAMP' => null,
-        'CANCERRESEARCH' => null,
         'CANON' => null,
         'CAPETOWN' => null,
         'CAPITAL' => null,
