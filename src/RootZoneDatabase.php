@@ -19,13 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2022121000, Last Updated Sat Dec 10 07:07:02 2022 UTC
- *
- * @version 2022121000
+ * # Version 2022121701, Last Updated Sat Dec 17 07:07:01 2022 UTC
+ * @version 2022121701
  */
 class RootZoneDatabase
 {
-    const VERSION = 2022121000;
+    const VERSION = 2022121701;
 
     const TLDS = [
         'AAA' => null,
@@ -749,7 +748,6 @@ class RootZoneDatabase
         'LOANS' => null,
         'LOCKER' => null,
         'LOCUS' => null,
-        'LOFT' => null,
         'LOL' => null,
         'LONDON' => null,
         'LOTTE' => null,
@@ -1086,7 +1084,6 @@ class RootZoneDatabase
         'SELECT' => null,
         'SENER' => null,
         'SERVICES' => null,
-        'SES' => null,
         'SEVEN' => null,
         'SEW' => null,
         'SEX' => null,
