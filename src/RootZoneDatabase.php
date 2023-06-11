@@ -19,18 +19,16 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2023060300, Last Updated Sat Jun  3 07:07:01 2023 UTC
- *
- * @version 2023060300
+ * # Version 2023061000, Last Updated Sat Jun 10 07:07:02 2023 UTC
+ * @version 2023061000
  */
 class RootZoneDatabase
 {
-    const VERSION = 2023060300;
+    const VERSION = 2023061000;
 
     const TLDS = [
         'AAA' => null,
         'AARP' => null,
-        'ABARTH' => null,
         'ABB' => null,
         'ABBOTT' => null,
         'ABBVIE' => null,
@@ -65,7 +63,6 @@ class RootZoneDatabase
         'AIRTEL' => null,
         'AKDN' => null,
         'AL' => null,
-        'ALFAROMEO' => null,
         'ALIBABA' => null,
         'ALIPAY' => null,
         'ALLFINANZ' => null,
@@ -439,7 +436,6 @@ class RootZoneDatabase
         'FERRARI' => null,
         'FERRERO' => null,
         'FI' => null,
-        'FIAT' => null,
         'FIDELITY' => null,
         'FIDO' => null,
         'FILM' => null,
@@ -706,7 +702,6 @@ class RootZoneDatabase
         'LAMBORGHINI' => null,
         'LAMER' => null,
         'LANCASTER' => null,
-        'LANCIA' => null,
         'LAND' => null,
         'LANDROVER' => null,
         'LANXESS' => null,
@@ -780,7 +775,6 @@ class RootZoneDatabase
         'MARKETS' => null,
         'MARRIOTT' => null,
         'MARSHALLS' => null,
-        'MASERATI' => null,
         'MATTEL' => null,
         'MBA' => null,
         'MC' => null,
