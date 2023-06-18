@@ -19,13 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2023061000, Last Updated Sat Jun 10 07:07:02 2023 UTC
- *
- * @version 2023061000
+ * # Version 2023061601, Last Updated Sat Jun 17 07:07:01 2023 UTC
+ * @version 2023061601
  */
 class RootZoneDatabase
 {
-    const VERSION = 2023061000;
+    const VERSION = 2023061601;
 
     const TLDS = [
         'AAA' => null,
@@ -305,7 +304,6 @@ class RootZoneDatabase
         'CONTACT' => null,
         'CONTRACTORS' => null,
         'COOKING' => null,
-        'COOKINGCHANNEL' => null,
         'COOL' => null,
         'COOP' => null,
         'CORSICA' => null,
@@ -462,7 +460,6 @@ class RootZoneDatabase
         'FO' => null,
         'FOO' => null,
         'FOOD' => null,
-        'FOODNETWORK' => null,
         'FOOTBALL' => null,
         'FORD' => null,
         'FOREX' => null,
@@ -568,7 +565,6 @@ class RootZoneDatabase
         'HELSINKI' => null,
         'HERE' => null,
         'HERMES' => null,
-        'HGTV' => null,
         'HIPHOP' => null,
         'HISAMITSU' => null,
         'HITACHI' => null,
@@ -1224,7 +1220,6 @@ class RootZoneDatabase
         'TRADING' => null,
         'TRAINING' => null,
         'TRAVEL' => null,
-        'TRAVELCHANNEL' => null,
         'TRAVELERS' => null,
         'TRAVELERSINSURANCE' => null,
         'TRUST' => null,
