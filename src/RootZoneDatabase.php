@@ -19,13 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2023070100, Last Updated Sat Jul  1 07:07:02 2023 UTC
- *
- * @version 2023070100
+ * # Version 2023070801, Last Updated Sat Jul  8 07:07:01 2023 UTC
+ * @version 2023070801
  */
 class RootZoneDatabase
 {
-    const VERSION = 2023070100;
+    const VERSION = 2023070801;
 
     const TLDS = [
         'AAA' => null,
@@ -587,7 +586,6 @@ class RootZoneDatabase
         'HOST' => null,
         'HOSTING' => null,
         'HOT' => null,
-        'HOTELES' => null,
         'HOTELS' => null,
         'HOTMAIL' => null,
         'HOUSE' => null,
@@ -919,7 +917,6 @@ class RootZoneDatabase
         'PARTNERS' => null,
         'PARTS' => null,
         'PARTY' => null,
-        'PASSAGENS' => null,
         'PAY' => null,
         'PCCW' => null,
         'PE' => null,
@@ -1282,7 +1279,6 @@ class RootZoneDatabase
         'VOTO' => null,
         'VOYAGE' => null,
         'VU' => null,
-        'VUELOS' => null,
         'WALES' => null,
         'WALMART' => null,
         'WALTER' => null,
