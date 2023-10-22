@@ -19,13 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2023101400, Last Updated Sat Oct 14 07:07:01 2023 UTC
- *
- * @version 2023101400
+ * # Version 2023102100, Last Updated Sat Oct 21 07:07:01 2023 UTC
+ * @version 2023102100
  */
 class RootZoneDatabase
 {
-    const VERSION = 2023101400;
+    const VERSION = 2023102100;
 
     const TLDS = [
         'AAA' => null,
@@ -271,7 +270,6 @@ class RootZoneDatabase
         'CITI' => null,
         'CITIC' => null,
         'CITY' => null,
-        'CITYEATS' => null,
         'CK' => null,
         'CL' => null,
         'CLAIMS' => null,
@@ -473,7 +471,6 @@ class RootZoneDatabase
         'FRESENIUS' => null,
         'FRL' => null,
         'FROGANS' => null,
-        'FRONTDOOR' => null,
         'FRONTIER' => null,
         'FTR' => null,
         'FUJITSU' => null,
