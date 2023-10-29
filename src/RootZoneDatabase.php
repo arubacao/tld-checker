@@ -19,13 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2023102100, Last Updated Sat Oct 21 07:07:01 2023 UTC
- *
- * @version 2023102100
+ * # Version 2023102800, Last Updated Sat Oct 28 07:07:01 2023 UTC
+ * @version 2023102800
  */
 class RootZoneDatabase
 {
-    const VERSION = 2023102100;
+    const VERSION = 2023102800;
 
     const TLDS = [
         'AAA' => null,
@@ -242,7 +241,6 @@ class RootZoneDatabase
         'CBA' => null,
         'CBN' => null,
         'CBRE' => null,
-        'CBS' => null,
         'CC' => null,
         'CD' => null,
         'CENTER' => null,
@@ -1087,7 +1085,6 @@ class RootZoneDatabase
         'SHOPPING' => null,
         'SHOUJI' => null,
         'SHOW' => null,
-        'SHOWTIME' => null,
         'SI' => null,
         'SILK' => null,
         'SINA' => null,
