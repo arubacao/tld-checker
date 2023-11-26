@@ -19,13 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2023111800, Last Updated Sat Nov 18 07:07:01 2023 UTC
- *
- * @version 2023111800
+ * # Version 2023112500, Last Updated Sat Nov 25 07:07:01 2023 UTC
+ * @version 2023112500
  */
 class RootZoneDatabase
 {
-    const VERSION = 2023111800;
+    const VERSION = 2023112500;
 
     const TLDS = [
         'AAA' => null,
@@ -1263,7 +1262,6 @@ class RootZoneDatabase
         'VLAANDEREN' => null,
         'VN' => null,
         'VODKA' => null,
-        'VOLKSWAGEN' => null,
         'VOLVO' => null,
         'VOTE' => null,
         'VOTING' => null,
