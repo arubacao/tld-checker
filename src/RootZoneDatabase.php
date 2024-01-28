@@ -19,13 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2024012000, Last Updated Sat Jan 20 07:07:01 2024 UTC
- *
- * @version 2024012000
+ * # Version 2024012700, Last Updated Sat Jan 27 07:07:01 2024 UTC
+ * @version 2024012700
  */
 class RootZoneDatabase
 {
-    const VERSION = 2024012000;
+    const VERSION = 2024012700;
 
     const TLDS = [
         'AAA' => null,
@@ -125,7 +124,6 @@ class RootZoneDatabase
         'BABY' => null,
         'BAIDU' => null,
         'BANAMEX' => null,
-        'BANANAREPUBLIC' => null,
         'BAND' => null,
         'BANK' => null,
         'BAR' => null,
@@ -884,7 +882,6 @@ class RootZoneDatabase
         'OKINAWA' => null,
         'OLAYAN' => null,
         'OLAYANGROUP' => null,
-        'OLDNAVY' => null,
         'OLLO' => null,
         'OM' => null,
         'OMEGA' => null,
