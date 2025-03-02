@@ -19,13 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2025022200, Last Updated Sat Feb 22 07:07:01 2025 UTC
- *
- * @version 2025022200
+ * # Version 2025030100, Last Updated Sat Mar  1 07:07:02 2025 UTC
+ * @version 2025030100
  */
 class RootZoneDatabase
 {
-    const VERSION = 2025022200;
+    const VERSION = 2025030100;
 
     const TLDS = [
         'AAA' => null,
@@ -656,7 +655,6 @@ class RootZoneDatabase
         'KDDI' => null,
         'KE' => null,
         'KERRYHOTELS' => null,
-        'KERRYLOGISTICS' => null,
         'KERRYPROPERTIES' => null,
         'KFH' => null,
         'KG' => null,
@@ -720,7 +718,6 @@ class RootZoneDatabase
         'LIMO' => null,
         'LINCOLN' => null,
         'LINK' => null,
-        'LIPSY' => null,
         'LIVE' => null,
         'LIVING' => null,
         'LK' => null,
