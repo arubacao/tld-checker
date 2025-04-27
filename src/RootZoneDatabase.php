@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Root Zone Database.
  *
@@ -20,6 +21,7 @@ namespace Arubacao\TldChecker;
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
  * # Version 2025042600, Last Updated Sat Apr 26 07:07:01 2025 UTC
+ *
  * @version 2025042600
  */
 class RootZoneDatabase
