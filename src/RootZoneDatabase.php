@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Root Zone Database.
  *
@@ -20,13 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2025042600, Last Updated Sat Apr 26 07:07:01 2025 UTC
- *
- * @version 2025042600
+ * # Version 2025050300, Last Updated Sat May  3 07:07:01 2025 UTC
+ * @version 2025050300
  */
 class RootZoneDatabase
 {
-    const VERSION = 2025042600;
+    const VERSION = 2025050300;
 
     const TLDS = [
         'AAA' => null,
@@ -687,7 +685,6 @@ class RootZoneDatabase
         'LACAIXA' => null,
         'LAMBORGHINI' => null,
         'LAMER' => null,
-        'LANCASTER' => null,
         'LAND' => null,
         'LANDROVER' => null,
         'LANXESS' => null,
