@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Root Zone Database.
  *
@@ -20,13 +19,12 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2025061400, Last Updated Sat Jun 14 07:07:01 2025 UTC
- *
- * @version 2025061400
+ * # Version 2025062100, Last Updated Sat Jun 21 07:07:01 2025 UTC
+ * @version 2025062100
  */
 class RootZoneDatabase
 {
-    const VERSION = 2025061400;
+    const VERSION = 2025062100;
 
     const TLDS = [
         'AAA' => null,
