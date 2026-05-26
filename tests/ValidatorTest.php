@@ -141,7 +141,7 @@ class ValidatorTest extends TestCase
     public function isTld_works_with_unicode_domains()
     {
         $this->assertTrue(Validator::isTld('ଭାରତ'));
-        $this->assertTrue(Validator::isTld('大众汽车'));
+        $this->assertTrue(Validator::isTld('商店'));
         $this->assertTrue(Validator::isTld('ভাৰত'));
         $this->assertTrue(Validator::isTld('москва'));
         $this->assertTrue(Validator::isTld('католик'));

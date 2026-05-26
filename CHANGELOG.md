@@ -6,6 +6,7 @@ All notable changes to `tld-checker` will be documented in this file
 
 - Fix GitHub Actions CI for legacy Laravel/PHP test lanes
 - Avoid relying on Laravel's global `Validator` alias in package bootstrapping
+- Replace a removed IANA IDN test fixture with a current TLD
 - Bump `actions/checkout` to v6
 
 ## 1.3.0 - 2026-05-26
