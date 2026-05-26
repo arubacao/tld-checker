@@ -4,6 +4,13 @@ All notable changes to `tld-checker` will be documented in this file
 
 ## Unreleased
 
+## 2.0.0 - 2026-05-26
+
+- Require PHP 8.1+ for the next maintained release line
+- Add GitHub Actions coverage for Laravel 9.x through 13.x on PHP 8.1 through 8.5
+- Allow orchestra/testbench 8 through 11 and PHPUnit 10 through 12 for modern Laravel testing
+- Modernize the PHPUnit configuration so it works across PHPUnit 9 through 12
+- Return `false` for non-string validator input instead of raising PHP 8 TypeErrors
 - Fix GitHub Actions CI for legacy Laravel/PHP test lanes
 - Avoid relying on Laravel's global `Validator` alias in package bootstrapping
 - Replace a removed IANA IDN test fixture with a current TLD

@@ -21,8 +21,8 @@ composer require arubacao/tld-checker
 
 #### Laravel
 
-If you would like to use `arubacao/tld-checker` with the [Laravel Validator](https://laravel.com/docs/validation/latest), you must also register the service provider:  
-*(only required for Laravel `<=5.4`, for Laravel `>=5.5` [auto-discovery](composer.json#L36) is enabled.)*
+Laravel auto-discovery registers the service provider for supported Laravel versions. If auto-discovery is disabled in your application, register the provider manually:
+
 ```PHP
 // config/app.php
 
@@ -33,7 +33,7 @@ If you would like to use `arubacao/tld-checker` with the [Laravel Validator](htt
 ```
 Notes:  
 
- - `arubacao/tld-checker` is tested with GitHub Actions for PHP `7.0` - `8.1` & Laravel `5.0` - `9.x`.
+ - `arubacao/tld-checker` is tested with GitHub Actions for PHP `8.1` - `8.5` & Laravel `9.x` - `13.x`.
 ## Usage
 Check a TLD using `Validator::isTld()`:
 ``` php

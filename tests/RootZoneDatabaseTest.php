@@ -10,7 +10,7 @@ class RootZoneDatabaseTest extends TestCase
     /**
      * @test
      */
-    public function database_has_more_than_1500_entries()
+    public function test_database_has_more_than_1500_entries()
     {
         $this->assertGreaterThan(1400, count(RootZoneDatabase::TLDS));
     }
@@ -18,7 +18,7 @@ class RootZoneDatabaseTest extends TestCase
     /**
      * @test
      */
-    public function spot_check_database()
+    public function test_spot_check_database()
     {
         $this->assertArrayHasKey('COM', RootZoneDatabase::TLDS);
         $this->assertArrayHasKey('RU', RootZoneDatabase::TLDS);

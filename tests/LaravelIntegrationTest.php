@@ -12,7 +12,7 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
     }
 
     /** @test */
-    public function is_tld_does_not_fail_if_domain_is_tld()
+    public function test_is_tld_does_not_fail_if_domain_is_tld()
     {
         $validTlds = [
             ['tld' => 'com'],
@@ -33,7 +33,7 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
     }
 
     /** @test */
-    public function is_tld_fails_if_domain_is_not_tld()
+    public function test_is_tld_fails_if_domain_is_not_tld()
     {
         $invalidTlds = [
             ['tld' => 'coom'],
@@ -54,7 +54,7 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
     }
 
     /** @test */
-    public function ends_with_tld_does_not_fail_when_domain_ends_with_tld()
+    public function test_ends_with_tld_does_not_fail_when_domain_ends_with_tld()
     {
         $validTlds = [
             ['tld' => 'google.com'],
@@ -74,7 +74,7 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
     }
 
     /** @test */
-    public function ends_with_tld_fails_when_domain_does_not_end_with_tld()
+    public function test_ends_with_tld_fails_when_domain_does_not_end_with_tld()
     {
         $invalidTlds = [
             ['tld' => 'googlecoom'],
@@ -95,7 +95,7 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
     }
 
     /** @test */
-    public function is_tld_fails_and_has_message_when_domain_is_not_tld()
+    public function test_is_tld_fails_and_has_message_when_domain_is_not_tld()
     {
         $validator = Validator::make([
             'invalid' => 'coom',
@@ -108,7 +108,7 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
     }
 
     /** @test */
-    public function ends_with_tld_fails_and_has_message_when_domain_does_not_end_with_tld()
+    public function test_ends_with_tld_fails_and_has_message_when_domain_does_not_end_with_tld()
     {
         $validator = Validator::make([
             'invalid' => 'googlecoom',

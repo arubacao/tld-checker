@@ -46,7 +46,7 @@ class ValidatorTest extends TestCase
     /**
      * @test
      */
-    public function isTld_allows_leading_dots()
+    public function test_isTld_allows_leading_dots()
     {
         $this->assertTrue(Validator::isTld('.COM'));
         $this->assertTrue(Validator::isTld('.DE'));
@@ -117,7 +117,7 @@ class ValidatorTest extends TestCase
     /**
      * @test
      */
-    public function isTld_is_case_insensitive()
+    public function test_isTld_is_case_insensitive()
     {
         $this->assertTrue(Validator::isTld('com'));
         $this->assertTrue(Validator::isTld('coM'));
@@ -128,7 +128,7 @@ class ValidatorTest extends TestCase
     /**
      * @test
      */
-    public function endsWithTld_is_case_insensitive()
+    public function test_endsWithTld_is_case_insensitive()
     {
         $this->assertTrue(Validator::endsWithTld('GooGlE.com'));
         $this->assertTrue(Validator::endsWithTld('gooGle.coM'));
@@ -138,7 +138,7 @@ class ValidatorTest extends TestCase
     /**
      * @test
      */
-    public function isTld_works_with_unicode_domains()
+    public function test_isTld_works_with_unicode_domains()
     {
         $this->assertTrue(Validator::isTld('ଭାରତ'));
         $this->assertTrue(Validator::isTld('商店'));
@@ -158,11 +158,25 @@ class ValidatorTest extends TestCase
     /**
      * @test
      */
-    public function endsWithTld_works_with_unicode_domains()
+    public function test_endsWithTld_works_with_unicode_domains()
     {
         $this->assertTrue(Validator::endsWithTld('الاعلى-للاتصالات.قطر'));
         $this->assertTrue(Validator::endsWithTld('кто.рф'));
         $this->assertTrue(Validator::endsWithTld('www.இந.இந்தியா'));
         $this->assertTrue(Validator::endsWithTld('Deutsche.Vermögensberatung.vermögensberater'));
+    }
+
+    /**
+     * @test
+     */
+    public function test_non_string_values_are_invalid()
+    {
+        $this->assertFalse(Validator::isTld(null));
+        $this->assertFalse(Validator::isTld([]));
+        $this->assertFalse(Validator::isTld(new \stdClass()));
+
+        $this->assertFalse(Validator::endsWithTld(null));
+        $this->assertFalse(Validator::endsWithTld([]));
+        $this->assertFalse(Validator::endsWithTld(new \stdClass()));
     }
 }
