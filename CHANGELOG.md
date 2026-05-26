@@ -2,6 +2,12 @@
 
 All notable changes to `tld-checker` will be documented in this file
 
+## Unreleased
+
+- Fix GitHub Actions CI for legacy Laravel/PHP test lanes
+- Avoid relying on Laravel's global `Validator` alias in package bootstrapping
+- Bump `actions/checkout` to v6
+
 ## 1.3.0 - 2026-05-26
 
 - Add Laravel 9 / orchestra-testbench 7 support

@@ -22,34 +22,41 @@ jobs:
           - php: '7.0'
             testbench: '3.0.*'
             phpunit: '~4.8.36'
+            extensions: intl, mcrypt
           - php: '7.1'
             testbench: '3.5.*'
             phpunit: '~6.0'
+            extensions: intl
           - php: '7.2'
             testbench: '3.8.*'
             phpunit: '^7.5'
+            extensions: intl
           - php: '7.3'
             testbench: '^4.0'
             phpunit: '^8.0'
+            extensions: intl
           - php: '7.4'
             testbench: '^5.0'
             phpunit: '^8.5'
+            extensions: intl
           - php: '8.0'
             testbench: '^6.0'
             phpunit: '^9.0'
+            extensions: intl
           - php: '8.1'
             testbench: '^7.0'
             phpunit: '^9.5'
+            extensions: intl
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          extensions: intl
+          extensions: ${{ matrix.extensions }}
           coverage: none
           tools: composer:v2.2
 
@@ -57,7 +64,9 @@ jobs:
         run: composer validate --strict
 
       - name: Select test dependencies
-        run: composer require orchestra/testbench:${{ matrix.testbench }} phpunit/phpunit:${{ matrix.phpunit }} --no-update --no-interaction --dev
+        run: |
+          composer config --no-plugins allow-plugins.kylekatarnls/update-helper false
+          composer require orchestra/testbench:${{ matrix.testbench }} phpunit/phpunit:${{ matrix.phpunit }} --no-update --no-interaction --dev
 
       - name: Install dependencies
         run: composer update --prefer-dist --no-interaction --no-progress

@@ -2,6 +2,8 @@
 
 namespace Arubacao\TldChecker\Test;
 
+use Illuminate\Support\Facades\Validator;
+
 class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
 {
     protected function getPackageProviders($app)
@@ -22,7 +24,7 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
         ];
 
         foreach ($validTlds as $tld) {
-            $validator = \Validator::make($tld, [
+            $validator = Validator::make($tld, [
                 'tld' => 'is_tld',
             ]);
 
@@ -43,7 +45,7 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
         ];
 
         foreach ($invalidTlds as $tld) {
-            $validator = \Validator::make($tld, [
+            $validator = Validator::make($tld, [
                 'tld' => 'is_tld',
             ]);
 
@@ -63,7 +65,7 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
         ];
 
         foreach ($validTlds as $tld) {
-            $validator = \Validator::make($tld, [
+            $validator = Validator::make($tld, [
                 'tld' => 'ends_with_tld',
             ]);
 
@@ -84,7 +86,7 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
         ];
 
         foreach ($invalidTlds as $tld) {
-            $validator = \Validator::make($tld, [
+            $validator = Validator::make($tld, [
                 'tld' => 'ends_with_tld',
             ]);
 
@@ -95,7 +97,7 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
     /** @test */
     public function is_tld_fails_and_has_message_when_domain_is_not_tld()
     {
-        $validator = \Validator::make([
+        $validator = Validator::make([
             'invalid' => 'coom',
         ], [
             'invalid' => 'is_tld',
@@ -108,7 +110,7 @@ class LaravelIntegrationTest extends \Orchestra\Testbench\TestCase
     /** @test */
     public function ends_with_tld_fails_and_has_message_when_domain_does_not_end_with_tld()
     {
-        $validator = \Validator::make([
+        $validator = Validator::make([
             'invalid' => 'googlecoom',
         ], [
             'invalid' => 'ends_with_tld',
