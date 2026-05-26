@@ -2,6 +2,14 @@
 
 All notable changes to `tld-checker` will be documented in this file
 
+## 1.3.0 - 2026-05-26
+
+- Add Laravel 9 / orchestra-testbench 7 support
+- Replace Travis CI with GitHub Actions for the test matrix
+- Restore scheduled IANA root zone database updates via GitHub Actions
+- Refresh `RootZoneDatabase` to IANA version `2026052600`
+- Harden the database build script and keep generated output StyleCI-compatible
+
 ## 1.2.X - 2019-01-09
 
 - No breaking changes

@@ -20,13 +20,13 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2025070500, Last Updated Sat Jul  5 07:07:01 2025 UTC
+ * # Version 2026052600, Last Updated Tue May 26 07:07:02 2026 UTC
  *
- * @version 2025070500
+ * @version 2026052600
  */
 class RootZoneDatabase
 {
-    const VERSION = 2025070500;
+    const VERSION = 2026052600;
 
     const TLDS = [
         'AAA' => null,
@@ -374,7 +374,6 @@ class RootZoneDatabase
         'DRIVE' => null,
         'DTV' => null,
         'DUBAI' => null,
-        'DUNLOP' => null,
         'DUPONT' => null,
         'DURBAN' => null,
         'DVAG' => null,
@@ -517,7 +516,6 @@ class RootZoneDatabase
         'GOLD' => null,
         'GOLDPOINT' => null,
         'GOLF' => null,
-        'GOO' => null,
         'GOODYEAR' => null,
         'GOOG' => null,
         'GOOGLE' => null,
@@ -773,6 +771,7 @@ class RootZoneDatabase
         'MEMORIAL' => null,
         'MEN' => null,
         'MENU' => null,
+        'MERCK' => null,
         'MERCKMSD' => null,
         'MG' => null,
         'MH' => null,
@@ -975,7 +974,6 @@ class RootZoneDatabase
         'REALTY' => null,
         'RECIPES' => null,
         'RED' => null,
-        'REDSTONE' => null,
         'REDUMBRELLA' => null,
         'REHAB' => null,
         'REISE' => null,
@@ -1282,7 +1280,6 @@ class RootZoneDatabase
         'WINE' => null,
         'WINNERS' => null,
         'WME' => null,
-        'WOLTERSKLUWER' => null,
         'WOODSIDE' => null,
         'WORK' => null,
         'WORKS' => null,

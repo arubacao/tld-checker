@@ -19,33 +19,47 @@ define('ROOT_ZONE_DATABASE_MD5', 'https://data.iana.org/TLD/tlds-alpha-by-domain
 define('TEMPLATE', dirname(__DIR__).'/build/data.template');
 define('OUTPUT_FILE', dirname(__DIR__).'/src/RootZoneDatabase.php');
 
+function getFileContents($path)
+{
+    $contents = file_get_contents($path);
+
+    if (false === $contents) {
+        throw new \RuntimeException("Unable to read $path\n");
+    }
+
+    return $contents;
+}
+
 if (file_exists(OUTPUT_FILE)) {
     require_once OUTPUT_FILE;
 }
 
 echo "Get New Root Zone Database\n";
-$root_zone_data = file_get_contents(ROOT_ZONE_DATABASE);
-$root_zone_data_md5 = explode(' ', file_get_contents(ROOT_ZONE_DATABASE_MD5))[0];
+$root_zone_data = getFileContents(ROOT_ZONE_DATABASE);
+$root_zone_data_md5 = strtok(getFileContents(ROOT_ZONE_DATABASE_MD5), " \t\n");
 
 echo "Validating Data\n";
+if (false === $root_zone_data_md5) {
+    throw new \Exception("Unable to parse MD5 hash\n");
+}
 if (md5($root_zone_data) !== $root_zone_data_md5) {
     throw new \Exception("Invalid MD5 hash\n");
 }
 
 $tlds = explode("\n", $root_zone_data);
-$tlds = array_filter($tlds, function ($tld) {
-    return $tld != '';
-});
+$tlds = array_values(array_filter($tlds, 'strlen'));
 
 $root_zone_data_version_line = array_shift($tlds);
-preg_match('/Version (.*?),/', $root_zone_data_version_line, $root_zone_data_version);
+if (! preg_match('/^# Version (.*?),/', $root_zone_data_version_line, $root_zone_data_version)) {
+    throw new \Exception("Version does not match typical pattern. Something must have gone wrong.\n");
+}
 $root_zone_data_version = $root_zone_data_version[1];
 
 if (count($tlds) <= 1400) {
-    throw new \Exception("TLDs array is too small. Something must went wrong.\n");
+    throw new \Exception("TLDs array is too small. Something must have gone wrong.\n");
 }
 if (0 !== strpos($root_zone_data_version_line, '#')) {
-    throw new \Exception("Version does not match typical pattern. Something must went wrong.\n");
+    throw new \Exception("Version does not match typical pattern. Something must have gone wrong.\n");
 }
 if (
     // Check Version
@@ -53,7 +67,7 @@ if (
     $root_zone_data_version == Arubacao\TldChecker\RootZoneDatabase::VERSION &&
     // Check TLDs
     defined('Arubacao\TldChecker\RootZoneDatabase::TLDS') &&
-    $tlds == Arubacao\TldChecker\RootZoneDatabase::TLDS
+    $tlds == array_keys(Arubacao\TldChecker\RootZoneDatabase::TLDS)
 ) {
     echo "Root Zone Database is Identical.\n";
     exit(0);
@@ -71,11 +85,13 @@ $replacements = [
     '%VERSION%' => $root_zone_data_version,
     '%TLDS%' => $tldsFormatted,
 ];
-$output = file_get_contents(TEMPLATE);
+$output = getFileContents(TEMPLATE);
 $output = str_replace(array_keys($replacements), array_values($replacements), $output);
 
 echo "Storing new database\n";
-file_put_contents(OUTPUT_FILE, $output);
+if (false === file_put_contents(OUTPUT_FILE, $output)) {
+    throw new \RuntimeException("Unable to write ".OUTPUT_FILE."\n");
+}
 
 $end = microtime(true);
 printf("Time used in seconds: %f\n", $end - $start);

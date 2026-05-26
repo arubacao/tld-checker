@@ -1,8 +1,8 @@
 # Top Level Domain (TLD) validation library for PHP
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/arubacao/tld-checker.svg?style=flat-square)](https://packagist.org/packages/arubacao/tld-checker)
-[![Build Status](https://img.shields.io/travis/arubacao/tld-checker/master.svg?style=flat-square)](https://travis-ci.com/arubacao/tld-checker)
-[![Codecov](https://img.shields.io/codecov/c/github/arubacao/tld-checker.svg?style=flat-square)](https://codecov.io/gh/arubacao/tld-checker)
+[![CI](https://img.shields.io/github/actions/workflow/status/arubacao/tld-checker/ci.yml?branch=master&label=ci&style=flat-square)](https://github.com/arubacao/tld-checker/actions/workflows/ci.yml)
+[![IANA TLD Update](https://img.shields.io/github/actions/workflow/status/arubacao/tld-checker/update-tld-database.yml?branch=master&label=iana%20update&style=flat-square)](https://github.com/arubacao/tld-checker/actions/workflows/update-tld-database.yml)
 [![Quality Score](https://img.shields.io/scrutinizer/g/arubacao/tld-checker.svg?style=flat-square)](https://scrutinizer-ci.com/g/arubacao/tld-checker)
 [![Total Downloads](https://img.shields.io/packagist/dt/arubacao/tld-checker.svg?style=flat-square)](https://packagist.org/packages/arubacao/tld-checker)
 
@@ -33,7 +33,7 @@ If you would like to use `arubacao/tld-checker` with the [Laravel Validator](htt
 ```
 Notes:  
 
- - `arubacao/tld-checker` is functional and fully [tested](https://travis-ci.com/arubacao/tld-checker) for PHP `7.0` - `8.0` & Laravel `5.0` - `8.x`.   
+ - `arubacao/tld-checker` is tested with GitHub Actions for PHP `7.0` - `8.1` & Laravel `5.0` - `9.x`.
 ## Usage
 Check a TLD using `Validator::isTld()`:
 ``` php
@@ -77,6 +77,16 @@ $request->validate([
 ``` bash
 composer test
 ```
+
+## Maintenance
+
+Refresh the generated IANA database locally:
+
+``` bash
+composer build
+```
+
+The repository also has a scheduled GitHub Actions workflow that runs every Sunday at `04:01 UTC`. If IANA has published a new root zone version, the workflow commits the refreshed `src/RootZoneDatabase.php` file and tags the next patch release so Packagist can pick it up.
 
 ## Contributing
 

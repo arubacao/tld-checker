@@ -10,7 +10,6 @@
     ],
     "homepage": "https://github.com/arubacao/tld-checker",
     "license": "MIT",
-    "version": "1.3.0",
     "authors": [
         {
             "name": "Christopher Lass",
@@ -49,6 +48,7 @@
         }
     },
     "scripts": {
+        "build": "php build/build.php",
         "test": "vendor/bin/phpunit"
     }
 }

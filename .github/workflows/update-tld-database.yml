@@ -1,0 +1,89 @@
+name: Update IANA TLD Database
+
+on:
+  schedule:
+    - cron: '1 4 * * 0'
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Optional release tag to use when changes are found.
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-tld-database
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.repository == 'arubacao/tld-checker'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          coverage: none
+
+      - name: Update generated database
+        run: php build/build.php
+
+      - name: Detect database changes
+        id: diff
+        run: |
+          if git diff --quiet -- src/RootZoneDatabase.php; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Root zone database is already current."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Compute release tag
+        if: steps.diff.outputs.changed == 'true'
+        id: version
+        env:
+          REQUESTED_TAG: ${{ github.event.inputs.release_tag || '' }}
+        run: |
+          if [ -n "$REQUESTED_TAG" ]; then
+            next_tag="$REQUESTED_TAG"
+          else
+            latest_tag="$(git tag --list '[0-9]*.[0-9]*.[0-9]*' --sort=-v:refname | head -n 1)"
+            if [ -z "$latest_tag" ]; then
+              latest_tag="0.0.0"
+            fi
+
+            IFS=. read -r major minor patch <<< "$latest_tag"
+            patch=$((patch + 1))
+            next_tag="$major.$minor.$patch"
+
+            while git rev-parse --verify --quiet "refs/tags/$next_tag"; do
+              patch=$((patch + 1))
+              next_tag="$major.$minor.$patch"
+            done
+          fi
+
+          if git rev-parse --verify --quiet "refs/tags/$next_tag"; then
+            echo "Tag $next_tag already exists." >&2
+            exit 1
+          fi
+
+          echo "tag=$next_tag" >> "$GITHUB_OUTPUT"
+
+      - name: Commit, tag, and push update
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/RootZoneDatabase.php
+          git commit -m "update iana db - $(date -u)"
+          git tag "${{ steps.version.outputs.tag }}"
+          git push origin "HEAD:${{ github.ref_name }}" "${{ steps.version.outputs.tag }}"
