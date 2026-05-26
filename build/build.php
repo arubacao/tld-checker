@@ -90,7 +90,7 @@ $output = str_replace(array_keys($replacements), array_values($replacements), $o
 
 echo "Storing new database\n";
 if (false === file_put_contents(OUTPUT_FILE, $output)) {
-    throw new \RuntimeException("Unable to write ".OUTPUT_FILE."\n");
+    throw new \RuntimeException('Unable to write '.OUTPUT_FILE."\n");
 }
 
 $end = microtime(true);
