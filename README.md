@@ -3,7 +3,6 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/arubacao/tld-checker.svg?style=flat-square)](https://packagist.org/packages/arubacao/tld-checker)
 [![CI](https://img.shields.io/github/actions/workflow/status/arubacao/tld-checker/ci.yml?branch=master&label=ci&style=flat-square)](https://github.com/arubacao/tld-checker/actions/workflows/ci.yml)
 [![IANA TLD Update](https://img.shields.io/github/actions/workflow/status/arubacao/tld-checker/update-tld-database.yml?branch=master&label=iana%20update&style=flat-square)](https://github.com/arubacao/tld-checker/actions/workflows/update-tld-database.yml)
-[![Quality Score](https://img.shields.io/scrutinizer/g/arubacao/tld-checker.svg?style=flat-square)](https://scrutinizer-ci.com/g/arubacao/tld-checker)
 [![Total Downloads](https://img.shields.io/packagist/dt/arubacao/tld-checker.svg?style=flat-square)](https://packagist.org/packages/arubacao/tld-checker)
 
 This package allows **validation** of **top level domains** against the official [The DNS Root Zone](https://www.iana.org/domains/root) database from [iana.org](https://www.iana.org/).  
