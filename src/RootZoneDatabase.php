@@ -20,13 +20,13 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2026062302, Last Updated Wed Jun 24 07:07:01 2026 UTC
+ * # Version 2026072500, Last Updated Sat Jul 25 07:07:01 2026 UTC
  *
- * @version 2026062302
+ * @version 2026072500
  */
 class RootZoneDatabase
 {
-    const VERSION = 2026062302;
+    const VERSION = 2026072500;
 
     const TLDS = [
         'AAA' => null,
@@ -1263,6 +1263,7 @@ class RootZoneDatabase
         'WATCHES' => null,
         'WEATHER' => null,
         'WEATHERCHANNEL' => null,
+        'WEB' => null,
         'WEBCAM' => null,
         'WEBER' => null,
         'WEBSITE' => null,
