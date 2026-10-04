@@ -20,13 +20,13 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2026092700, Last Updated Sun Sep 27 07:07:01 2026 UTC
+ * # Version 2026100400, Last Updated Sun Oct  4 07:07:01 2026 UTC
  *
- * @version 2026092700
+ * @version 2026100400
  */
 class RootZoneDatabase
 {
-    const VERSION = 2026092700;
+    const VERSION = 2026100400;
 
     const TLDS = [
         'AAA' => null,
@@ -649,7 +649,6 @@ class RootZoneDatabase
         'JPMORGAN' => null,
         'JPRS' => null,
         'JUEGOS' => null,
-        'JUNIPER' => null,
         'KAUFEN' => null,
         'KDDI' => null,
         'KE' => null,
