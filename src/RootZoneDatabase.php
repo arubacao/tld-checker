@@ -20,13 +20,13 @@ namespace Arubacao\TldChecker;
  *
  * @see https://data.iana.org/TLD/tlds-alpha-by-domain.txt
  *
- * # Version 2026101001, Last Updated Sun Oct 11 07:07:02 2026 UTC
+ * # Version 2026101800, Last Updated Sun Oct 18 07:07:02 2026 UTC
  *
- * @version 2026101001
+ * @version 2026101800
  */
 class RootZoneDatabase
 {
-    const VERSION = 2026101001;
+    const VERSION = 2026101800;
 
     const TLDS = [
         'AAA' => null,
